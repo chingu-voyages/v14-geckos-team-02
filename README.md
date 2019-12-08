@@ -65,31 +65,75 @@ SO I can practice multiple times a day
 
 A three-level hierarchy of branches is created, through which changes are promoted.
 
-- **Working branches:** Individual branches created by each developer when they are working on changes and bug fixes. There are 4 basic types of branches: **bug**, **feature**, **refactor**, and **style**. For example: feature/course-review. Consult the wiki for more details and examples.
+- **Working branches:** Individual branches created by each developer when they are working on changes and bug fixes. The type can be one of these types:
+
+  - **feat:** a new feature
+  - **fix:** a bug fix
+  - **docs:** changes to documentation
+  - **style:** formatting, missing semi colons, etc; no code change
+  - **refactor:** refactoring production code
+  - **test:** adding tests, refactoring test; no production code change
+  - **chore:** updating build tasks, package manager configs, etc; no production code change
+  basic types of branches: 
+ 
 - **Development:** Reflects the code for the next release. Developers work in working branches, which are then pulled into this branch. All code pulled into this branch must be tested and undergo peer review as part of the PR process.
 - **Master:** Only updated from the development branch Pull Requests. This branch always reflects the current production release that is seen by live users.
 
 1. Once the skeleton repo is built in GitHub, team members will clone it to their individual computers. 
-```
-git clone https://github.com/chingu-voyages/v14-geckos-team-02.git <custom-folder-name>
-```
+  
+    ```
+    git clone https://github.com/chingu-voyages/v14-geckos-team-02.git <custom-folder-name>
+    ```
 
 2. Working branches are created for specific features and tasks (like bug fixes).
-```
-git checkout -b feature/course-review
-```
+  
+    ```
+    git checkout -b feature/course-review
+    ```
 
 3. All normal development activities occur on team members' individual computers. Commits should be frequent and each commit should have a discrete, atomic purpose.
 
+    **Commit Messages**
+    A commit messages consists of three distinct parts separated by a blank line: the title, an optional body and an optional footer. The layout looks like this:
+
+      ```
+      type: subject
+
+      body
+
+      footer
+      ```
+
+    - The title consists of the type of the message and subject.
+    - The type is contained within the title and should be consistent with the working branche's type e.g **feature**, **bug** etc.
+    - Subjects should be no greater than 50 characters, should begin with a capital letter and do not end with a period. Use an imperative tone to describe what a commit does, rather than what it did. For example, use change; not changed or changes.
+    - Not all commits are complex enough to warrant a body, therefore it is optional and only used when a commit requires a bit of explanation and context. Use the body to explain the what and why of a commit, not the how.
+    - The footer is optional and is used to reference issue tracker IDs.
+
+    ```
+    feat: Summarize changes in around 50 characters or less
+
+    More detailed explanatory text, if necessary.
+
+    Further paragraphs come after blank lines.
+
+      - Bullet points are okay
+
+    Put references to issues in the footer:
+
+    Resolves: #11
+    See also: #08, #09
+    ```
+
 4. **Changes should be frequently pushed to the matching working branch on GitHub.** This ensures that if a computer is lost, stolen, or malfunctions, your work will still be available to the rest of your team. **Before every single push, development branch need to be pulled to make sure there is no conflict. If there is, conflicts should be resolved before the code is pushed to the matching working branch on GitHub.**
 
-```
-// In your working branch
-git pull origin development
+    ```
+    // In your working branch
+    git pull origin development
 
-// Then
-git push origin <working-branch>
-```
+    // Then
+    git push origin <working-branch>
+    ```
 
 5. Once a feature has been unit tested, a Pull Request (PR) should be created to fold it into the development branch. It's always a good idea to require that PR's be reviewed by another member of the team. This helps to ensure that the quality of the app is maintained.
 
@@ -214,8 +258,6 @@ git push origin <working-branch>
     // Recommended:
     const element = '<button class="btn">Click Me</button>';
     ```
-
-  - 
 
 
 
