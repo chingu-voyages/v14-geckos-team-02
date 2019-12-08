@@ -8,6 +8,7 @@ Add-project-description-here | Voyage-14 | https://chingu.io/ | Twitter: https:/
 1. [Development Workflow](#development-workflow)
 1. [Tech Stack](#tech-stack)
 1. [Design Mockup](#design-mockup)
+1. [Style Guide](#style-guide)
 
 ## About
 
@@ -105,6 +106,118 @@ git push origin <working-branch>
 * [MongoDB](https://www.mongodb.com/) -- Cross-platform document-oriented database management program.
 
 ## Design Mockup
+
+## Style Guide
+
+**HTML formatting and style rules:**
+  - HTML5 semantic tags such as ```<header>```, ```<footer>```, ```<article>```, ```<section>1```, etc. are used to add meaning to the code.
+  - No div or section selectors are without a CSS class or id.
+  - All code is lowercase
+  - The code does not have trailing white spaces.
+  - Indentation is consistent (2 spaces).
+  - Code uses a new line for every block, list or table element and indent every such child element (it is acceptable to put all elements in one line).
+  - When quoting attribute values, code uses consistent "double" quotation marks.
+  - HTML documents HTML5 ```<!doctype html>```
+  - Code omits type attributes for style sheets and scripts.
+  - Code does not use entity references unless necessary e.g. characters with special meaning (like < and &) as well as control or “invisible” characters (like no-break spaces).
+
+**CSS formatting and style rules:**
+  - The code does not have trailing white spaces.
+  - Indentation is consistent (2 spaces).
+  - Code indents all content, that is rules within rules as well as declarations to reflect hierarchy and improve understanding.
+  - The code uses a semicolon after every declaration for consistency and extensibility reasons.
+  - Code always uses a space after a property name's colon, but no space between property and colon, for consistency reasons.
+  - Code always uses a single space between the last selector and the opening brace that begins the declaration block. Code always start a new line for each selector and declaration.
+  - Code always put a blank line between rules.
+  - Code uses consistent quotation marks for attribute selectors or property values (single).
+  - The code uses meaningful or generic ID and class names that are as short as possible, but as long as necessary.
+  - The code does not use element names in conjunction with IDs or classes.
+  - The code uses shorthand properties where possible.
+  - Code omits unit specification after 0 values.
+  - Code uses 3-character hexadecimal notation where possible.
+  - Code separates words in ID and class names by a hyphen.
+
+**JavaScript formatting and style rules**
+  - The code does not have trailing white spaces.
+  - Indentation is consistent (2 spaces).
+  - Use comments to explain code: What does it cover, what purpose does it serve, and why is the respective solution used or preferred?
+  - Mark todos and action items with ```TODO:```
+  - When declaring variables, declare variables with ```const```, first. If needed, reassign the variable using ```let```. There isn't a good reason to use the var keyword anymore for variable declaration.
+  - **Always use semicolons:**
+
+    ```
+    // Recommended
+    const foo = () => {
+      return true // Missing semicolon
+    } // Missing semicolon
+
+    function foo() {
+      return true;
+    }; // Extra semicolon
+    ```
+
+  - There's no reason to use wrapper objects for primitive types, plus they're dangerous. However, type casting is okay.
+  - ```forEach``` or ```for``` loops are preferred over ```for-in``` loops when iterating over an array.
+  - ```for-in``` loops are used to loop over keys in an object. Make sure to wrap the content of the ```for-in``` loop in a conditional statement to prevent it from from iterating over the prototype chain:
+    
+    ```
+    // Recommended
+    myObj = {'firstName':'Ada','lastName':'Lovelace'};
+    for (const key in myObj) {
+      if (myObj.hasOwnProperty(key)) {
+        console.log(myObj[key]);
+      } 
+    }
+    ```
+  - Use Array and Object literals instead of Array and Object constructors.
+  - In general, functionNamesLikeThis, variableNamesLikeThis, ClassNamesLikeThis, methodNamesLikeThis, CONSTANT_VALUES_LIKE_THIS and filenameslikethis.js
+  - Because of implicit semicolon insertion, always start your curly braces on the same line as whatever they're opening.
+
+    ```
+    // Recommended
+    if (something) {
+      // Do something
+    } else {
+      // Do something else
+    }
+    ```
+
+  - Single-line array and object initializers are allowed when they fit on one line. There should be no spaces after the opening bracket or before the closing bracket:
+
+    ```
+    // Recommended
+    const array = [1, 2, 3];
+    const object = {a: 1, b: 2, c: 3};
+    ```
+
+  - Multiline array and object initializers are indented one-level, with the braces on their own line, just like blocks:
+
+    ```
+    // Recommended:
+    const array = [
+      'Joe <joe@email.com>',
+      'Sal <sal@email.com>',
+      'Murr <murr@email.com>',
+      'Q <q@email.com>'
+    ];
+
+    const object = {
+        id: 'foo',
+        class: 'foo-important',
+        name: 'notification'
+    };
+    ```
+
+  - Except for JSON objects, use single-quotes (') over double-quotes ("). This is helpful when creating strings that include HTML:
+
+    ```
+    // Recommended:
+    const element = '<button class="btn">Click Me</button>';
+    ```
+
+  - 
+
+
 
 
 
