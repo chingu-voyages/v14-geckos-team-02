@@ -13,15 +13,18 @@ class App extends React.Component {
       score: 0,
       category: '',
       answerStatus: false,
-
     };
   }
+
   render(){
     return (
-      <h1>Main App</h1>
+      <div className="App"><h1>App Core</h1></div>
     );
   }
 }
+
+const WelcomeScreen = () => <h1>Welcome Screen</h1>;
+
 /*
 function App() {
   return (
