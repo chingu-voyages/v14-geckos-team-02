@@ -5,6 +5,16 @@ import './App.css';
 class App extends React.Component {
   constructor(props){
     super(props);
+    this.state = {
+      currentScreen: 'Welcome',
+      cardsArray: [],
+      currentCard: 0,
+      level: 0,
+      score: 0,
+      category: '',
+      answerStatus: false,
+
+    };
   }
   render(){
     return (
