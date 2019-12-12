@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      currentScreen: 'Welcome',
+      currentScreen: 'WelcomeScreen',
       cardsArray: [],
       currentCard: 0,
       level: 0,
@@ -18,9 +18,14 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="App"><h1>App Core</h1></div>
+      <div className="App"><AppCore currentScreen={this.state.currentScreen}/></div>
     );
   }
+}
+
+function AppCore(props) {
+  return props.currentScreen === 'Welcome' ? <WelcomeScreen /> : <ResultsScreen />;
+
 }
 
 const WelcomeScreen = () => <h1>Welcome Screen</h1>;
