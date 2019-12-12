@@ -24,6 +24,8 @@ class App extends React.Component {
 }
 
 const WelcomeScreen = () => <h1>Welcome Screen</h1>;
+const ResultsScreen = () => <h1>Results Screen</h1>;
+const CardScreen = () => <h1>Card Screen</h1>;
 
 /*
 function App() {
