@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
@@ -29,6 +28,7 @@ function AppCore(props) {
     case 'Results': return <ResultsScreen />
     default: return <CardScreen />
   }
+}
 
 const WelcomeScreen = () => <h1>Welcome Screen</h1>;
 const ResultsScreen = () => <h1>Results Screen</h1>;
