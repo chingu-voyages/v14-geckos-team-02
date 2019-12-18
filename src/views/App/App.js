@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
   return (
+ feature/quiz-questions
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -14,7 +15,22 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          V14-geckos-team-02
+          Learn React
+
+    <div className='App'>
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className='App-link'
+          href='https://reactjs.org'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Learn React
+ development
         </a>
       </header>
     </div>
