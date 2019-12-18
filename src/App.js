@@ -29,7 +29,6 @@ function AppCore(props) {
     case 'Results': return <ResultsScreen />
     default: return <CardScreen />
   }
-}
 
 const WelcomeScreen = () => <h1>Welcome Screen</h1>;
 const ResultsScreen = () => <h1>Results Screen</h1>;
