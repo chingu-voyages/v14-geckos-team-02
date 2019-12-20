@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Quiz from '../Quiz/Quiz';
 
 class App extends React.Component {
   constructor(props){
@@ -17,7 +18,10 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="App"><AppCore currentScreen={this.state.currentScreen}/></div>
+      <div className="App">
+        <AppCore currentScreen={this.state.currentScreen}/>
+        <Quiz />
+      </div>
     );
   }
 }
