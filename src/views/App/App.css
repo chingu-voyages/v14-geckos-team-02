@@ -1,5 +1,12 @@
+body {
+  display: flex;
+  justify-content: center;
+}
 .App {
   text-align: center;
+  margin: 2px;
+  padding: 2px;
+  width: 90vw;
 }
 
 .App-logo {
@@ -34,5 +41,18 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .App {
+    width: 85vw;
+  }
+
+}
+
+@media only screen and (min-width: 1024px){
+  .App {
+    width: 55vw;
   }
 }
