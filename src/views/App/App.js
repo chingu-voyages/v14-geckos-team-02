@@ -22,7 +22,7 @@ class App extends React.Component {
           <div class="title">
             Data Structures and Algorithms
           </div>
-          <div class="home-title">
+          <div class="home-icon">
             <img src="HomeIcons/icons8-home-page-50.png" alt="home icon"></img>
           </div>
         </div>

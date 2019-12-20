@@ -19,7 +19,7 @@ body {
   border: 3px solid green;
 }
 
-.home-title {
+.home-icon {
   display: grid;
   justify-content: end;
   align-items: center;
