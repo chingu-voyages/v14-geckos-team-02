@@ -18,16 +18,16 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <div class="header">
-          <div class="title">
+        <div class="headerAS">
+          <div class="titleAS">
             Data Structures and Algorithms
           </div>
-          <div class="home-icon" data-toggle="tooltip" title="Home Screen">
+          <div class="home-iconAS" data-toggle="tooltip" title="Home Screen">
             <img src="HomeIcons/icons8-home-page-50.png" alt="home icon"></img>
           </div>
         </div>
         <AppCore currentScreen={this.state.currentScreen}/>
-        <div class="footer"></div>
+        <div class="footerAS"></div>
       </div>
     );
   }

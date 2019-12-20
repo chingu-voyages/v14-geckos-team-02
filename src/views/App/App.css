@@ -10,26 +10,26 @@ body {
   display:grid;
   grid-template-rows: 60px 1fr 50px;
 }
-.header{
+.headerAS {
   border: 3px solid blue;
   display: grid;
   grid-template-columns: 1fr 60px;
 }
-.footer{
+.footerAS {
   border: 3px solid green;
 }
 
-.home-icon {
+.home-iconAS {
   display: grid;
   justify-content: end;
   align-items: center;
 }
 
-.home-icon:hover {
+.home-iconAS:hover {
   cursor:pointer;
 }
 
-.title {
+.titleAS {
   display: grid;
   justify-content: center;
   align-items: center;
