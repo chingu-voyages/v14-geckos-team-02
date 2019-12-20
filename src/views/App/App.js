@@ -18,7 +18,12 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <div class="header"></div>
+        <div class="header">
+          <div class="title">
+          </div>
+          <div class="home-title">
+          </div>
+        </div>
         <AppCore currentScreen={this.state.currentScreen}/>
         <div class="footer"></div>
       </div>
