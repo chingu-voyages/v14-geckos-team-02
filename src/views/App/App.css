@@ -25,6 +25,10 @@ body {
   align-items: center;
 }
 
+.home-icon:hover {
+  cursor:pointer;
+}
+
 .title {
   display: grid;
   justify-content: center;
