@@ -19,6 +19,11 @@ body {
   border: 3px solid green;
 }
 
+.home-title {
+  display: grid;
+  justify-content: end;
+  align-items: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
