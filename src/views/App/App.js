@@ -22,6 +22,7 @@ class App extends React.Component {
           <div class="title">
           </div>
           <div class="home-title">
+            <img src="HomeIcons/icons8-home-page-100.png" alt="home icon"></img>
           </div>
         </div>
         <AppCore currentScreen={this.state.currentScreen}/>
