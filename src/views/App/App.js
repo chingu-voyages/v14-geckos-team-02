@@ -20,6 +20,7 @@ class App extends React.Component {
       <div className="App">
         <div class="header"></div>
         <AppCore currentScreen={this.state.currentScreen}/>
+        <div class="footer"></div>
       </div>
     );
   }
