@@ -20,6 +20,7 @@ class App extends React.Component {
       <div className="App">
         <div class="header">
           <div class="title">
+            Data Structures and Algorithms
           </div>
           <div class="home-title">
             <img src="HomeIcons/icons8-home-page-50.png" alt="home icon"></img>
