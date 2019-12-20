@@ -17,7 +17,10 @@ class App extends React.Component {
 
   render(){
     return (
-      <div className="App"><AppCore currentScreen={this.state.currentScreen}/></div>
+      <div className="App">
+        <div class="header"></div>
+        <AppCore currentScreen={this.state.currentScreen}/>
+      </div>
     );
   }
 }
