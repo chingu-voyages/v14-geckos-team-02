@@ -29,6 +29,8 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  font-weight:bold;
 }
 .App-logo {
   height: 40vmin;
