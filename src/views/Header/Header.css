@@ -1,0 +1,24 @@
+.headerAS {
+  border: 3px solid blue;
+  display: grid;
+  grid-template-columns: 1fr 60px;
+  font-size: 1.2rem;
+}
+
+.home-iconAS {
+  display: grid;
+  justify-content: end;
+  align-items: center;
+}
+
+.home-iconAS:hover {
+  cursor:pointer;
+}
+
+.titleAS {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight:bold;
+}
