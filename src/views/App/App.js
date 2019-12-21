@@ -6,7 +6,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      currentScreen: 'Results',
+      currentScreen: 'CardScreen',
       cardsArray: [],
       currentCard: 0,
       level: 0,
