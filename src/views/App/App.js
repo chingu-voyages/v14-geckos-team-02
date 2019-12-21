@@ -16,12 +16,17 @@ class App extends React.Component {
       category: '',
       answerStatus: false,
     };
+    this.homeClick = this.homeClick.bind(this);
+  }
+
+  homeClick(){
+    this.setState({currentScreen: 'Welcome'});
   }
 
   render(){
     return (
       <div className="App">
-        <Header />
+        <Header homeClick={this.homeClick}/>
         <AppCore currentScreen={this.state.currentScreen}/>
         <Footer/>
       </div>
