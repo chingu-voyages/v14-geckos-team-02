@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 
 export default () => {
-
   return(
     <div class="headerAS">
       <div class="titleAS">
