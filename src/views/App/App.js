@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Quiz from '../Quiz/Quiz';
 
 class App extends React.Component {
   constructor(props){
@@ -18,6 +19,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+<<<<<<< HEAD
         <div class="headerAS">
           <div class="titleAS">
             Data Structures and Algorithms
@@ -28,6 +30,10 @@ class App extends React.Component {
         </div>
         <AppCore currentScreen={this.state.currentScreen}/>
         <div class="footerAS">coded by Chingu Cohort 14 Gecko Team 2</div>
+=======
+        <AppCore currentScreen={this.state.currentScreen}/>
+        <Quiz />
+>>>>>>> 7a9c59ecffa431fd1d4ae0f3cc729454f5aecc10
       </div>
     );
   }
