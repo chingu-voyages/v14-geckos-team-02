@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Quiz from '../Quiz/Quiz';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 class App extends React.Component {
   constructor(props){
@@ -39,6 +40,7 @@ function AppCore(props) {
 const WelcomeScreen = () => <h1>Welcome Screen</h1>;
 const ResultsScreen = () => <h1>Results Screen</h1>;
 const CardScreen = () => <Quiz />;
+/*
 const Footer = () => <div class="footerAS">coded by Chingu Cohort 14 Gecko Team 2</div>;
-
+*/
 export default App;
