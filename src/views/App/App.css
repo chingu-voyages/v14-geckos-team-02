@@ -1,3 +1,5 @@
+@import '../Footer/Footer.css';
+
 body {
   display: grid;
   justify-content: center;
@@ -19,10 +21,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 60px;
   font-size: 1.2rem;
-}
-.footerAS {
-  border: 3px solid green;
-  font-size: 0.6rem;
 }
 
 .home-iconAS {
