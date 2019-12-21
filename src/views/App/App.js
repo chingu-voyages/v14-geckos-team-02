@@ -27,7 +27,7 @@ class App extends React.Component {
           </div>
         </div>
         <AppCore currentScreen={this.state.currentScreen}/>
-        <div class="footerAS"></div>
+        <div class="footerAS">coded by Chingu Cohort 14 Gecko Team 2</div>
       </div>
     );
   }
