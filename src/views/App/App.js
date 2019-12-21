@@ -19,14 +19,6 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <div class="headerAS">
-          <div class="titleAS">
-            Data Structures and Algorithms
-          </div>
-          <div class="home-iconAS" data-toggle="tooltip" title="Home Screen">
-            <img src="HomeIcons/icons8-home-page-50.png" alt="home icon"></img>
-          </div>
-        </div>
         <AppCore currentScreen={this.state.currentScreen}/>
         <div class="footerAS">coded by Chingu Cohort 14 Gecko Team 2</div>
       </div>
@@ -45,5 +37,13 @@ function AppCore(props) {
 const WelcomeScreen = () => <h1>Welcome Screen</h1>;
 const ResultsScreen = () => <h1>Results Screen</h1>;
 const CardScreen = () => <Quiz />;
+const Header = () => <div class="headerAS">
+                      <div class="titleAS">
+                        Data Structures and Algorithms
+                      </div>
+                      <div class="home-iconAS" data-toggle="tooltip" title="Home Screen">
+                        <img src="HomeIcons/icons8-home-page-50.png" alt="home icon"></img>
+                      </div>
+                    </div>;
 
 export default App;
