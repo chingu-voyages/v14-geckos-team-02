@@ -19,8 +19,9 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <Header/>
         <AppCore currentScreen={this.state.currentScreen}/>
-        <div class="footerAS">coded by Chingu Cohort 14 Gecko Team 2</div>
+        <Footer/>
       </div>
     );
   }
@@ -45,5 +46,6 @@ const Header = () => <div class="headerAS">
                         <img src="HomeIcons/icons8-home-page-50.png" alt="home icon"></img>
                       </div>
                     </div>;
+const Footer = () => <div class="footerAS">coded by Chingu Cohort 14 Gecko Team 2</div>;
 
 export default App;
