@@ -19,7 +19,6 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-<<<<<<< HEAD
         <div class="headerAS">
           <div class="titleAS">
             Data Structures and Algorithms
@@ -30,10 +29,6 @@ class App extends React.Component {
         </div>
         <AppCore currentScreen={this.state.currentScreen}/>
         <div class="footerAS">coded by Chingu Cohort 14 Gecko Team 2</div>
-=======
-        <AppCore currentScreen={this.state.currentScreen}/>
-        <Quiz />
->>>>>>> 7a9c59ecffa431fd1d4ae0f3cc729454f5aecc10
       </div>
     );
   }
@@ -49,6 +44,6 @@ function AppCore(props) {
 
 const WelcomeScreen = () => <h1>Welcome Screen</h1>;
 const ResultsScreen = () => <h1>Results Screen</h1>;
-const CardScreen = () => <h1>Card Screen</h1>;
+const CardScreen = () => <Quiz />;
 
 export default App;
