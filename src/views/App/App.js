@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
 import Quiz from '../Quiz/Quiz';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      currentScreen: 'Results',
+      currentScreen: 'CardScreen',
       cardsArray: [],
       currentCard: 0,
       level: 0,
@@ -14,13 +16,19 @@ class App extends React.Component {
       category: '',
       answerStatus: false,
     };
+    this.homeClick = this.homeClick.bind(this);
+  }
+
+  homeClick(){
+    this.setState({currentScreen: 'Welcome'});
   }
 
   render(){
     return (
       <div className="App">
+        <Header homeClick={this.homeClick}/>
         <AppCore currentScreen={this.state.currentScreen}/>
-        <Quiz />
+        <Footer/>
       </div>
     );
   }
@@ -36,6 +44,8 @@ function AppCore(props) {
 
 const WelcomeScreen = () => <h1>Welcome Screen</h1>;
 const ResultsScreen = () => <h1>Results Screen</h1>;
-const CardScreen = () => <h1>Card Screen</h1>;
-
+const CardScreen = () => <Quiz />;
+/*
+const Footer = () => <div class="footerAS">coded by Chingu Cohort 14 Gecko Team 2</div>;
+*/
 export default App;

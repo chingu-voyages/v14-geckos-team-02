@@ -1,0 +1,7 @@
+.footerAS {
+  border: 1px solid grey;
+  font-size: 0.6rem;
+  display: grid;
+  justify-content: end;
+  align-items: end;
+}
