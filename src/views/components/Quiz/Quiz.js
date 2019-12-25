@@ -1,47 +1,66 @@
-import React,{useState} from 'react'
+import React,{ useState } from 'react'
+
+import Question from '../Question/Question';
 import MultipleChoice from '../MultipleChoice/MultipleChoice';
 
+import QUIZ_DATA from './quiz-data';
 
+const Quiz = () =>{
+    /**
+     * State should inclue the following properties:
+     * questions
+     * currentQuestion
+     * answer
+     * correctAnswers
+     */
+    let [questions] = useState(QUIZ_DATA);
+    let [currentQuestion, setCurrentQuestion] = useState(questions[0]);
+    let [correctAnswers, setCorrectAnswers] = useState(0); // num of correct answers
+    let [answer, setAnswer] = useState(); // Answer that user select
 
-export default ()=>{
-    const [QuestionDemo, setQuestionDemo]=useState({
-        question:"What is the best use of hash tables?",
-        choices:["find max/min","sorting","search or lookup","traverse"],
-        answer:"search or lookup", 
-        checkedOption:'',
-        id:"123"})
-    let [score,setScore]=useState(0) // countering score
-    let [value, setValue]=useState() // value that user select
-
-    const handleChecked=(value)=>{ 
-        setQuestionDemo({...QuestionDemo,checkedOption:value}) //enable radio btn respond to user's selection
-        setValue(value) // set value equal to user's selected value
+    const handleCheck = (answer) => { 
+        setAnswer(answer) // set Answer equal to user's selected Answer
     }
 
-    const handleClicked=()=>{ // by clicking Next btn, answer gets va 
-        if(QuestionDemo.answer===value){ 
-            setScore(score+=1)
-       }
-        alert(`Your current score is ${score}`)
-    }
-    console.log(score)
-    return(
-    
+    const handleClick = () => { // by clicking Next btn, answer gets va 
+        if (!answer) {
+            alert('Please make a slection')
+        } else {
+            if (currentQuestion.answer === answer) { 
+                setCorrectAnswers(correctAnswers += 1);
+                alert('Correct answer');
+            } else {
+                alert('Wrong answer');
+            }
 
+            // Check if questions array has any questions left
+            if (questions) {
+                questions.shift();
+                setCurrentQuestion(questions[0]);
+            }
+        }
+    }
+
+    return (
         <div className="container">
             <h1>Quiz Board</h1> 
-            <div>
-                <MultipleChoice 
-                question={QuestionDemo.question} 
-                choices={QuestionDemo.choices} 
-                answer={QuestionDemo.answer} 
-                checkedOption={QuestionDemo.checkedOption} 
-                handleChecked={handleChecked}
-                id={QuestionDemo.id}  />
-            </div>
-            <button   >Previous</button>
-            <button onClick={()=>handleClicked()} >Next</button>
-            
+            {
+                currentQuestion ?
+                <div>
+                    <Question question={currentQuestion.question} />
+                    <MultipleChoice 
+                    // question={currentQuestion.question} 
+                        choices={currentQuestion.multipleChoices} 
+                    // answer={currentQuestion.answer} 
+                        checkedOption={currentQuestion.checkedOption} 
+                        handleCheck={handleCheck}
+                        id={currentQuestion.id}  />
+                    <button onClick={handleClick}>Submit Answer</button>
+                </div>
+                : <div>End</div>
+            }
         </div>
     )
-}
+};
+
+export default Quiz;
