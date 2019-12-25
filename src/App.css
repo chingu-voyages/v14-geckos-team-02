@@ -1,5 +1,5 @@
-@import '../Footer/Footer.css';
-@import '../Header/Header.css';
+/* @import './views/components/Footer/Footer.css';
+@import './views/components/Header/Header.css';
 
 body {
   display: grid;
@@ -32,4 +32,4 @@ body {
   .App {
     width: 55vw;
   }
-}
+} */

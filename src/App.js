@@ -5,9 +5,9 @@ import './App.css';
 
 import HomePage from './views/pages/HomePage/HomePage';
 
-import Quiz from '../Quiz/Quiz';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import Quiz from './views/components/Quiz/Quiz';
+import Header from './views/components/Header/Header';
+import Footer from './views/components/Footer/Footer';
 
 class App extends React.Component {
   constructor(props){
@@ -34,9 +34,9 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={HomePage} /> 
         </Switch>
-        <Header homeClick={this.homeClick}/>
+        {/* <Header homeClick={this.homeClick}/>
         <AppCore currentScreen={this.state.currentScreen}/>
-        <Footer/>
+        <Footer/> */}
       </div>
     );
   }
