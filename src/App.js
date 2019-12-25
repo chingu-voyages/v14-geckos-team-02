@@ -1,8 +1,12 @@
 import React from 'react';
+
 import './App.css';
-import Quiz from '../Quiz/Quiz';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+
+import HomePage from './views/pages/HomePage/HomePage';
+
+import Quiz from './views/components/Quiz/Quiz';
+import Header from './views/components/Header/Header';
+import Footer from './views/components/Footer/Footer';
 
 class App extends React.Component {
   constructor(props){
@@ -26,9 +30,10 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <Header homeClick={this.homeClick}/>
-        <AppCore currentScreen={this.state.currentScreen}/>
-        <Footer/>
+        <HomePage />
+        {/* <Header homeClick={this.homeClick}/> */}
+        {/* <AppCore currentScreen={this.state.currentScreen}/> */}
+        {/* <Footer/> */}
       </div>
     );
   }
