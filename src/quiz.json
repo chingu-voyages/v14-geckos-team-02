@@ -1,0 +1,106 @@
+[
+    {
+      "question":
+        "BST search, insert, and delete operations typically run in time O(d). What is d?",
+      "answers": [
+        "The number of divisions at each level",  
+        "The total number of entries in all the nodes of the tree",
+        "The depth of the relevant node in the tree",
+        "The number of entries in each node",
+        "The number of nodes in the tree"
+      ],
+      "correct": "The depth of the relevant node in the tree",
+      "checkedOption":"",
+      "questionId": "000001"
+    },
+    {
+      "question":
+      "A binary tree is another name for a BST.",
+    "answers": ["True", "False"],
+    "correct": "False",
+    "checkedOption":"",
+    "questionId": "000002"
+    },
+    {
+      "question":
+      "RAM access time is normally measured in:",
+    "answers": [
+      "Nanoseconds (billionths of a second)", 
+      "Milliseconds (thousandths of a second)",
+      "Microseconds (millionths of a second)"
+    ],
+    "correct": "Nanoseconds (billionths of a second)",
+    "checkedOption":"",
+    "questionId": "000003"
+    },
+    {
+      "question":
+      "The Sequential Search algorithm is in O(n^2)O(n2).",
+    "answers": ["True", "False"],
+    "correct": "True",
+    "checkedOption":"",
+    "questionId": "000004"
+    },
+    {
+      "question":
+      "Given an array-based list implementation, deleting the current element takes how long in the average case?",
+    "answers": ["Θ(nlogn) time", "Θ(n) time", "Θ(1) time","Θ(logn) time"],
+    "correct": "Θ(n) time",
+    "checkedOption":"",
+    "questionId": "000005"
+    },
+    {
+      "question":
+      "An advantage of linked lists over the array-based list implementation is:",
+    "answers": [
+       "Expandability",
+       "Low access cost to arbitrary positions",
+       "None of these","Θ(logn) time", 
+       "Zero overhead",
+       "Optimal search speed"],
+    "correct": "Expandability",
+    "checkedOption":"",
+    "questionId": "000006"
+    },{
+      "question":
+      "Which of these is the best upper bound for a growth rate of 5n + 3?",
+    "answers": [
+       "O(1)",
+       "O(logn)",
+       "O(nlogn)", 
+       "O(n)"],
+    "correct": "O(n)",
+    "checkedOption":"",
+    "questionId": "000007"
+    },{
+      "question":
+      "Determine the proper relationship between the pair of functions: f(n)=10 and g(n)=log 10 ",
+    "answers": [
+      "f(n)is in Ω(g(n))", 
+      "f(n)is Θ(g(n))",
+      "f(n) is in O(g(n))"
+    ],
+    "correct": "f(n)is Θ(g(n))",
+    "checkedOption":"",
+    "questionId": "000008"
+    },{
+      "question":
+      "The worst case upper bound for sorting an array is O(nlogn) since this is the cost of the best algorithm (in the worst case) that we know about.",
+    "answers": ["True", "False"],
+    "correct": "True",
+    "checkedOption":"",
+    "questionId": "000009"
+    },{
+      "question":
+      "An inversion is:",
+    "answers": [
+      "A swap",
+      "When a record with key value greater than the current record's key appears before it in the array",
+      "A type of sort"
+    ],
+    "correct": "When a record with key value greater than the current record's key appears before it in the array",
+    "checkedOption":"",
+    "questionId": "000010"
+    }
+  
+  ]
