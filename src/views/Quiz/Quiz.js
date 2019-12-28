@@ -9,11 +9,11 @@ export default () => {
     let [score, setScore] = useState(0); // counting score
     let [value, setValue] = useState(); // value that user select
     let [count, setCount] = useState(0); // track on the number of questions
-  
+    let [currentQuestion]=useState([...questions])
+
     const handleCheck = (value, count) => {
-      const newQuestions = [...questions];
-      newQuestions[count].checkedOption = value;
-      setQuestions([...newQuestions]);
+      currentQuestion[count].checkedOption=value;
+      setQuestions([...currentQuestion]);
       setValue(value); // set value equal to user's selected value
     };
   
@@ -26,12 +26,6 @@ export default () => {
       setCount(newCount);
     };
    
-    const handleClickPrevious= () => {
-    
-        setScore((score -= 1));
-        const newCount = count < questions.length ? count - 1 : count;
-        setCount(newCount);
-      };
 
     return (
       <div className="container">
@@ -42,14 +36,12 @@ export default () => {
             question={questions[count].question}
             choices={questions[count].answers}
             answer={questions[count].correct}
-            checkedOption={questions[count].checkedOption}
-            handleChecked={handleCheck}
+            handleCheck={handleCheck}
             id={questions[count].questionId}
             count={count}
           />
         </div>
   
-        <button onClick={() => handleClickPrevious()}>Previous</button>
         <button onClick={() => handleClickNext()}>Next</button>
       </div>
     );

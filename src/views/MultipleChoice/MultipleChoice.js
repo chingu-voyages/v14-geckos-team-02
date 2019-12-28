@@ -3,31 +3,28 @@ import React from "react";
 export default ({
   question,
   choices,
-  checkedOption,
-  handleChecked,
+  handleCheck,
   id,
   answer,// Test only
   count
 }) => {
-    const myChoices=choices.map(c=>{
-        return <div >
-            <label key={id}>
-                <input
-              type="radio"
-              checked={checkedOption === `${c}`}
-                  onChange={e => handleChecked(e.target.value, count)}
-                value={c}
-             />{""}
-            {c}
-         </label>
-         </div>
-       })
-       
        return (
          <div>
            <h2>{question}</h2> 
            <span style={{color:'green'}}>(Answer: {answer})</span> {/* Test only */}
-           {myChoices}
+           {choices.map(c=>(
+                <div >
+                    <label key={id}>
+                        <input
+                        name={id}
+                        type="radio"
+                        onChange={e => handleCheck(e.target.value, count)}
+                        value={c}
+                    />{""}
+                    {c}
+                </label>
+                </div>
+                ))}
          </div>
        );
      };
