@@ -55,9 +55,11 @@ const Quiz = () =>{
                         checkedOption={currentQuestion.checkedOption} 
                         handleCheck={handleCheck}
                         id={currentQuestion.id}  />
-                    <button onClick={handleClick}>Submit Answer</button>
+                    <div className='button-container'>
+                        <button onClick={handleClick}>Submit</button>
+                    </div>
                 </div>
-                : <div>End</div>
+                : <div>Results Screen</div>
             }
         </div>
     )
