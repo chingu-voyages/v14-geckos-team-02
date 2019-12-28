@@ -33,6 +33,7 @@ class App extends React.Component {
       <div className="App">
         <Switch>
           <Route exact path='/' component={HomePage} /> 
+          <Route exact path='/big-o' component={Quiz} />
         </Switch>
         {/* <Header homeClick={this.homeClick}/>
         <AppCore currentScreen={this.state.currentScreen}/>
