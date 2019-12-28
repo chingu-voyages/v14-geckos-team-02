@@ -31,6 +31,7 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
+        <Header />
         <Switch>
           <Route exact path='/' component={HomePage} /> 
           <Route exact path='/big-o' component={Quiz} />
