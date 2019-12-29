@@ -3,7 +3,7 @@ import React,{ useState } from 'react'
 import Question from '../Question/Question';
 import MultipleChoice from '../MultipleChoice/MultipleChoice';
 
-import QUIZ_DATA from './quiz-data';
+import QUIZ_DATA from '../../../quiz-data';
 
 const Quiz = () =>{
     /**
@@ -13,7 +13,7 @@ const Quiz = () =>{
      * answer
      * correctAnswers
      */
-    let [questions] = useState(QUIZ_DATA);
+    let [questions] = useState(QUIZ_DATA[1].questions);
     let [currentQuestion, setCurrentQuestion] = useState(questions[0]);
     let [correctAnswers, setCorrectAnswers] = useState(0); // num of correct answers
     let [answer, setAnswer] = useState(); // Answer that user select
