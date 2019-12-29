@@ -1,19 +1,16 @@
 import React,{useState} from 'react'
 import MultipleChoice from '../MultipleChoice/MultipleChoice';
 
-
 var qBank=require('../../quiz.json')
 
 export default () => {
-    const [questions, setQuestions] = useState([...qBank]);
+    const [questions] = useState([...qBank]);
     let [score, setScore] = useState(0); // counting score
     let [value, setValue] = useState(); // value that user select
     let [count, setCount] = useState(0); // track on the number of questions
-    let [currentQuestion]=useState([...questions])
 
-    const handleCheck = (value, count) => {
-      currentQuestion[count].checkedOption=value;
-      setQuestions([...currentQuestion]);
+
+    const handleCheck = (value) => {
       setValue(value); // set value equal to user's selected value
     };
   
@@ -30,7 +27,7 @@ export default () => {
     return (
       <div className="container">
         <h1>Quiz Board</h1>
-        <span style={{color:"red"}}>(You current score is: {score})</span>  {/* Test only */}
+        <span style={{color:"red"}}>(Your current score is: {score})</span>  {/* Test only */}
         <div>
           <MultipleChoice
             question={questions[count].question}

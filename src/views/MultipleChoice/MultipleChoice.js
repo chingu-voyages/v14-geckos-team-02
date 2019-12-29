@@ -6,25 +6,19 @@ export default ({
   handleCheck,
   id,
   answer,// Test only
-  count
 }) => {
        return (
          <div>
            <h2>{question}</h2> 
            <span style={{color:'green'}}>(Answer: {answer})</span> {/* Test only */}
-           {choices.map(c=>(
-                <div >
-                    <label key={id}>
-                        <input
-                        name={id}
-                        type="radio"
-                        onChange={e => handleCheck(e.target.value, count)}
-                        value={c}
-                    />{""}
-                    {c}
-                </label>
+                {choices.map(c=>(
+                <div>
+                  <label key={id}>
+                    <input type="button" name={id} value={c} onClick={e=>handleCheck(e.target.value)} />
+                  </label>
                 </div>
                 ))}
+
          </div>
        );
      };

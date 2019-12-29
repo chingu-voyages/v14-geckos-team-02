@@ -10,7 +10,6 @@
         "The number of nodes in the tree"
       ],
       "correct": "The depth of the relevant node in the tree",
-      "checkedOption":"",
       "questionId": "000001"
     },
     {
@@ -18,7 +17,6 @@
       "A binary tree is another name for a BST.",
     "answers": ["True", "False"],
     "correct": "False",
-    "checkedOption":"",
     "questionId": "000002"
     },
     {
@@ -30,7 +28,6 @@
       "Microseconds (millionths of a second)"
     ],
     "correct": "Nanoseconds (billionths of a second)",
-    "checkedOption":"",
     "questionId": "000003"
     },
     {
@@ -38,7 +35,6 @@
       "The Sequential Search algorithm is in O(n^2)O(n2).",
     "answers": ["True", "False"],
     "correct": "True",
-    "checkedOption":"",
     "questionId": "000004"
     },
     {
@@ -46,7 +42,6 @@
       "Given an array-based list implementation, deleting the current element takes how long in the average case?",
     "answers": ["Θ(nlogn) time", "Θ(n) time", "Θ(1) time","Θ(logn) time"],
     "correct": "Θ(n) time",
-    "checkedOption":"",
     "questionId": "000005"
     },
     {
@@ -59,7 +54,6 @@
        "Zero overhead",
        "Optimal search speed"],
     "correct": "Expandability",
-    "checkedOption":"",
     "questionId": "000006"
     },{
       "question":
@@ -70,7 +64,6 @@
        "O(nlogn)", 
        "O(n)"],
     "correct": "O(n)",
-    "checkedOption":"",
     "questionId": "000007"
     },{
       "question":
@@ -81,14 +74,12 @@
       "f(n) is in O(g(n))"
     ],
     "correct": "f(n)is Θ(g(n))",
-    "checkedOption":"",
     "questionId": "000008"
     },{
       "question":
       "The worst case upper bound for sorting an array is O(nlogn) since this is the cost of the best algorithm (in the worst case) that we know about.",
     "answers": ["True", "False"],
     "correct": "True",
-    "checkedOption":"",
     "questionId": "000009"
     },{
       "question":
@@ -99,7 +90,6 @@
       "A type of sort"
     ],
     "correct": "When a record with key value greater than the current record's key appears before it in the array",
-    "checkedOption":"",
     "questionId": "000010"
     }
   
