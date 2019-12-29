@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -30,10 +31,13 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <HomePage />
-        {/* <Header homeClick={this.homeClick}/> */}
-        {/* <AppCore currentScreen={this.state.currentScreen}/> */}
-        {/* <Footer/> */}
+        <Switch>
+          <Route exact path='/' component={HomePage} /> 
+          <Route exact path='/big-o' component={Quiz} />
+        </Switch>
+        {/* <Header homeClick={this.homeClick}/>
+        <AppCore currentScreen={this.state.currentScreen}/>
+        <Footer/> */}
       </div>
     );
   }
