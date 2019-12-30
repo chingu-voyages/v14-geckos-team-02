@@ -11,14 +11,13 @@ export default ({
          <div>
            <h2>{question}</h2> 
            <span style={{color:'green'}}>(Answer: {answer})</span> {/* Test only */}
-                {choices.map(c=>(
-                <div>
-                  <label key={id}>
-                    <input type="button" name={id} value={c} onClick={e=>handleCheck(e.target.value)} />
-                  </label>
-                </div>
+                {choices.map(choice => (
+                  <div>
+                    <label key={id}>
+                      <input type="button" name={id} value={choice} onClick={e=>handleCheck(e.target.value)} />
+                    </label>
+                  </div>
                 ))}
-
          </div>
        );
      };
