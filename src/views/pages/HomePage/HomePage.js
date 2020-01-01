@@ -8,11 +8,12 @@ const HomePage = () => {
   return (
     <div>
     <nav>
-        <a href='/'>Data Structures and Algorithms</a>
+        <Link to="/quizCollections">Data Structures and Algorithms</Link>  {/* for test*/}
+        {/* <a href='/'>Data Structures and Algorithms</a> */}
     </nav>
     <div className='welcome'>
       <h1>Welcome</h1>
-      <Link to="/big-o">About</Link>
+      <Link to="/big-o">About Quiz</Link>
     </div>
     </div>
   );

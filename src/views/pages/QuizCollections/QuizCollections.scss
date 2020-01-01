@@ -1,0 +1,85 @@
+ 
+body, html {
+  background-color: #181B33;
+}
+
+.card {
+  width:280px;
+  height:auto;
+  display: block;
+  margin: 60px auto;
+  transition: .25s;
+  
+  &:hover {
+    box-shadow: 10px 5px 40px 20px darken(#0dc5ce, 10%);
+    cursor: pointer;
+    .button-primary {
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    }
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.card-header {
+  height: 215px;
+  width: 100%;
+  padding: 15px;
+  width:100%;
+  background-size:cover;
+  color:orange;
+}
+
+ 
+.card-body {
+  height:260px;
+  padding: 15px;
+  background-color:#0dc5ce;
+  width:100%;
+}
+
+.btn-display {
+  padding: 15px;
+  background-color:#0dc5ce;
+  width:100%;
+}
+
+
+.body-content {
+  padding-bottom: 40px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.button-primary {
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  font-family: inherit;
+  background-color:#0dc5ce;
+  color: #fff;
+  font-size: 15px;
+  transition:.25s;
+  
+  i{
+    padding-right:2px;
+  }
+}
+
+
