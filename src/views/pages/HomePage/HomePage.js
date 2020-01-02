@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div className='welcome'>
       <h1>Welcome</h1>
-      <Link to="/big-o">Enter</Link>
+      <Link to="/big-o">About</Link>
     </div>
   );
 };

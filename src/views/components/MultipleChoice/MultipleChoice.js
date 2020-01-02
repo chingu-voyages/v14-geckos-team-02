@@ -1,22 +1,24 @@
-import React from 'react';
+import React from "react";
 
-export default ({choices, checkedOption, handleCheck, id}) => {
-    const myChoices = () => {
-        return (
-            <div key={id}>
-                <label><input type="radio" name="answer" onChange={(e)=>handleCheck(e.target.value)} value={choices[0]}/> {choices[0]}</label>
-                <label><input type="radio" name="answer" onChange={(e)=>handleCheck(e.target.value)} value={choices[1]}/> {choices[1]}</label>
-                <label><input type="radio" name="answer" onChange={(e)=>handleCheck(e.target.value)} value={choices[2]}/> {choices[2]}</label>
-                <label><input type="radio" name="answer" onChange={(e)=>handleCheck(e.target.value)} value={choices[3]}/> {choices[3]}</label>
-            </div>
-       
-        )
-    }
-    return(
-        <div>
-            {myChoices()}
-        </div>
-    )
-};
-
-
+export default ({
+  question,
+  choices,
+  handleCheck,
+  id,
+  answer,// Test only
+}) => {
+       return (
+         <div>
+           <h2>{question}</h2> 
+           <span style={{color:'green'}}>(Answer: {answer})</span> {/* Test only */}
+                {choices.map(choice => (
+                  <div>
+                    <label key={id}>
+                      <input type="button" name={id} value={choice} onClick={e=>handleCheck(e.target.value)} />
+                    </label>
+                  </div>
+                ))}
+         </div>
+       );
+     };
+     
