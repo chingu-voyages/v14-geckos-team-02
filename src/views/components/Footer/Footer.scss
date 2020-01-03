@@ -2,10 +2,10 @@ footer {
   color: #fff;
   font-size: 0.9rem;
   text-align: right;
-
-  position: absolute;
+  position: sticky;
   bottom: 0;
   width: 100%;
+  border: 4px solid red;
 
   p {
     padding: 5px 30px 5px 0;
