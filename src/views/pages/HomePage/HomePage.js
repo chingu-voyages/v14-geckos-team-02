@@ -6,15 +6,9 @@ import './HomePage.scss';
 
 const HomePage = () => {
   return (
-    <div>
-    <nav>
-        <Link to="/quizCollections">Data Structures and Algorithms</Link>  {/* for test*/}
-        {/* <a href='/'>Data Structures and Algorithms</a> */}
-    </nav>
     <div className='welcome'>
       <h1>Welcome</h1>
-      <Link to="/big-o">About Quiz</Link>
-    </div>
+      <Link to="/quiz-collections">About Quiz</Link>
     </div>
   );
 };
