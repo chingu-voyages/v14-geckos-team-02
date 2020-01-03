@@ -3,15 +3,17 @@ body, html {
   background-color: #181B33;
 }
 
+.colections{
+  display: flex;
+}
+
 .card {
-  width:280px;
+  width:14.5%;
   height:auto;
   display: block;
-  margin: 60px auto;
-  transition: .25s;
-  
+  margin: 6% auto;
   &:hover {
-    box-shadow: 10px 5px 40px 20px darken(#0dc5ce, 10%);
+    // box-shadow: 12px 5px 20px 10px darken(#0dc5ce, 20%);
     cursor: pointer;
     .button-primary {
       animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -37,32 +39,33 @@ body, html {
 }
 
 .card-header {
-  height: 215px;
+  height: 66%;
   width: 100%;
-  padding: 15px;
+  padding: 5.3%;
   width:100%;
   background-size:cover;
   color:orange;
+
 }
 
  
 .card-body {
-  height:260px;
-  padding: 15px;
+  height:100%;
+  padding: 5.3%;
   background-color:#0dc5ce;
   width:100%;
 }
 
 .btn-display {
-  padding: 15px;
+  padding: 5.3%;
   background-color:#0dc5ce;
   width:100%;
 }
 
 
 .body-content {
-  padding-bottom: 40px;
-  font-size: 13px;
+  padding-bottom: 15%;
+  font-size: 0.8rem;
   line-height: 1.8;
 }
 
@@ -74,12 +77,8 @@ body, html {
   font-family: inherit;
   background-color:#0dc5ce;
   color: #fff;
-  font-size: 15px;
-  transition:.25s;
-  
-  i{
-    padding-right:2px;
-  }
+  font-size: 1.2rem;
+   
 }
 
 
