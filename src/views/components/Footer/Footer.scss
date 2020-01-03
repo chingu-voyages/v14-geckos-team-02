@@ -1,12 +1,19 @@
 footer {
   color: #fff;
-  font-size: 0.9rem;
-  text-align: right;
+  font-size: 0.75rem;
+  text-align: center;
   position: sticky;
   bottom: 0;
   width: 100%;
 
   p {
     padding: 5px 30px 5px 0;
+  }
+}
+
+@media only screen and (min-width: 600px){
+  footer {
+    font-size: 0.9rem;
+    text-align: right;
   }
 }
