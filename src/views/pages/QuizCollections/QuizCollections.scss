@@ -1,0 +1,88 @@
+
+body, html {
+  background-color: #181B33;
+}
+
+.collections{
+  width: 85%;
+  display: flex;
+  margin: 120px auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.card {
+  width:25%;
+  
+  &:hover {
+    cursor: pointer;
+    .button-primary {
+      padding: 1rem;
+      border: 1px solid #fff;
+      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    }
+  }
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.card-header {
+  background-color: #fff;
+  padding: 1.25rem;
+  width:100%;
+  min-height: 270px;
+  color:orange;
+  display: flex;
+  justify-content: center;
+}
+
+.card-image {
+  height: 80%;
+  width: 80%;
+}
+
+.card-body {
+  padding: 1.25rem;
+  min-height: 200px;
+  background-color:#0dc5ce;
+  width:100%;
+}
+
+.btn-display {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem;
+  background-color:#0dc5ce;
+  width:100%;
+}
+
+.body-content {
+  padding-bottom: 5%;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.button-primary {
+  border: none;
+  background-color:#0dc5ce;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+
