@@ -6,14 +6,14 @@ body, html {
 .collections{
   width: 85%;
   display: flex;
-  margin: 120px auto;
+  margin: 10px auto;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
 .card {
   width:25%;
-  
+
   &:hover {
     cursor: pointer;
     .button-primary {
@@ -27,7 +27,7 @@ body, html {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
   }
-  
+
   20%, 80% {
     transform: translate3d(2px, 0, 0);
   }
@@ -45,7 +45,7 @@ body, html {
   background-color: #fff;
   padding: 1.25rem;
   width:100%;
-  min-height: 270px;
+  min-height: 170px;
   color:orange;
   display: flex;
   justify-content: center;
@@ -84,5 +84,3 @@ body, html {
   font-size: 1.5rem;
   padding: 1rem;
 }
-
-
