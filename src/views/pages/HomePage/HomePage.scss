@@ -24,6 +24,19 @@ a {
   }
 }
 
+@media only screen and (min-width: 600px){
+  .welcome {
+    h1 {
+      font-size: 110px;
+      font-weight: 800;
+    }
+    a {
+      font-size: 60px;
+      font-weight: 800;
+    }
+  }
+}
+
 @media only screen and (min-width: 768px){
   .welcome {
     h1 {
