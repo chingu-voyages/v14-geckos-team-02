@@ -49,21 +49,18 @@ body, html {
   color:orange;
   display: flex;
   justify-content: center;
-  border: 3px solid green;
 }
 
 .card-image {
   height: 80%;
   width: 80%;
-  border: 3px solid blue;
 }
 
 .card-body {
   padding: 1.25rem;
-  min-height: 35%;
+  height: 35%;
   background-color:#0dc5ce;
   width:100%;
-  border: 3px solid red;
 }
 
 .btn-display {
