@@ -14,6 +14,7 @@ body, html {
 
 .card {
   width:60%;
+  margin-bottom: 20px;
 
   &:hover {
     cursor: pointer;
@@ -95,6 +96,7 @@ body, html {
   }
   .card {
     width:20%;
+    margin-bottom: 0;
   }
 }
 
