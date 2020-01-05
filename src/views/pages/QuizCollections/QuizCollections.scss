@@ -7,12 +7,12 @@ body, html {
   width: 95%;
   display: flex;
   margin: 10px auto;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  margin-bottom: 25px;
 }
 
 .card {
-  width:25%;
+  width:60%;
 
   &:hover {
     cursor: pointer;
@@ -85,8 +85,22 @@ body, html {
   padding: 1rem;
 }
 
-@media only screen and (min-width:768px){
+@media only screen and (min-width:800px){
+  .collections {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 95%;
+  }
+  .card {
+    width:20%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
   .collections {
     width: 85%;
+  }
+  .card {
+    width: 25%;
   }
 }
