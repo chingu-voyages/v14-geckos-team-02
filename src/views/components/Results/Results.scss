@@ -1,0 +1,53 @@
+
+  
+
+
+  .resultContainer {
+    flex-basis: percentage(2/3);
+    width: percentage(1/7);
+    background-color: white;
+    padding: 1% 1%;
+    margin: 10% auto;
+
+    @media (max-width: 500px) { //responsive 
+      & {
+        flex-basis: 50%;
+        width: 50%;
+      }
+    }
+  }
+  
+ 
+  .result{
+    padding: 10%;
+
+    &__title {
+      padding: 0.5rem auto;
+      color:#0dc5ce;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.075rem;
+      text-transform: uppercase;
+    }
+    
+    &__score {
+        margin: 0 0 0.3rem;
+        color: #444;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.75rem;
+      }
+    &__num{
+        color:#0dc5ce;
+    }
+    &__accuracy {
+      color: #666;
+      line-height: 1.0rem;
+      font-size: 1.7rem;
+    }
+  }
+
+  .back-btn{
+    margin-left: 43%;
+    background-color:#0dc5ce ;
+  }
