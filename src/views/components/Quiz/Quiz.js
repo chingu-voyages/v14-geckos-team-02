@@ -44,7 +44,9 @@ const Quiz = () => {
               handleCheck={handleCheck}
               id={questions[count].questionId}
           />
-          <button onClick={() => handleClickNext()}>Next</button>
+          <div className="button-container">
+            <button onClick={() => handleClickNext()}>Next</button>
+          </div>
         </div>
       </div>
        }
