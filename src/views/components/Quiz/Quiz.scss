@@ -32,7 +32,7 @@ label {
   display: flex;
   justify-content: flex-end;
 
-  button {
+  .next-button {
     margin: 30px;
     padding: 15px 60px;
     font-size: 1rem;
@@ -40,6 +40,10 @@ label {
     background-color: $button-background;
     border: none;
     letter-spacing: 1.5px;
+  }
+
+  .next-button:hover {
+    cursor: pointer;
   }
 }
 

@@ -27,18 +27,22 @@ const Quiz = () => {
   
       event.target.classList.add('active-item');
       event.target.querySelector('.checkmark').innerHTML = '<i class="fas fa-check-circle"></i>';
+      document.querySelector('.next-button').disabled = false;
     };
   
     const handleClickNext = () => {
-      if (questions[count].answer === value) {
-        setScore((score += 1));
+      if (document.querySelector('.active-item')) {
+        if (questions[count].answer === value) {
+          setScore((score += 1));
+        }
+        alert(`Your current score is ${score}`);
+        let newCount = count < questions.length ? count + 1 : count;
+  
+        clearActiveItem();
+        
+        setCount(newCount);
       }
-      alert(`Your current score is ${score}`);
-      let newCount = count < questions.length ? count + 1 : count;
-
-      clearActiveItem();
       
-      setCount(newCount);
     };
     console.log(count, "---", questions.length)
     
@@ -58,7 +62,7 @@ const Quiz = () => {
               id={questions[count].questionId}
           />
           <div className="button-container">
-            <button onClick={() => handleClickNext()}>Next</button>
+            <button className="next-button" onClick={handleClickNext}>Next</button>
           </div>
         </div>
       </div>

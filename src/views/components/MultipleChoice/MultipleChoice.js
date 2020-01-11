@@ -15,7 +15,7 @@ export default ({
           {choices.map((choice,i) => {
               return (
                 <li key={i} className="multiple-choice-item" onClick={e=>handleCheck(e)} data-value={choice}>
-                  <span className="checkmark"><i class="far fa-circle"></i></span>{choice}
+                  <span className="checkmark"><i className="far fa-circle"></i></span>{choice}
                 </li>
               )}
             )}
