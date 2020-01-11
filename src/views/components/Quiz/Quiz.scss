@@ -5,7 +5,7 @@ $button-background: #4B22F3;
 
 .container {
   background-color: $quiz-background;
-  margin: 200px auto;
+  margin: 100px auto;
   width: 80%;
 
   h1 {
@@ -17,6 +17,7 @@ $button-background: #4B22F3;
 }
 
 .question {
+  font-size: 1.25rem;
   color: #fff;
   padding: 0 20px;
 }
@@ -25,10 +26,6 @@ label {
   display: block;
   color: #fff;
   padding: 10px 20px;
-}
-
-input[type="radio"]:checked {
-  color: $highlights;
 }
 
 .button-container {

@@ -1,4 +1,5 @@
 import React from "react";
+import './MultipleChoice.scss';
 
 export default ({
   question,
@@ -8,17 +9,17 @@ export default ({
   answer,// Test only
 }) => {
        return (
-         <div key={id}>
-           <h2>{question}</h2> 
-           <span style={{color:'green'}}>(Answer: {answer})</span> {/* Test only */}
-                {choices.map((choice,i) => (
-                  <div key={i}>
-                    <label>
-                      <input type="button" name={id} value={choice} onClick={e=>handleCheck(e.target.value)} />
-                    </label>
-                  </div>
-                ))}
-         </div>
+        <div className="multiple-choice-list">
+          <h2>{question}</h2> 
+          <span style={{color:'green'}}>(Answer: {answer})</span> {/* Test only */}
+          {choices.map((choice,i) => {
+              return (
+                <li key={i} className="multiple-choice-item" onClick={e=>handleCheck(e)} data-value={choice}>
+                  <span className="checkmark"><i class="far fa-circle"></i></span>{choice}
+                </li>
+              )}
+            )}
+        </div>
        );
      };
      

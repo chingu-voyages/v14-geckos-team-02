@@ -13,9 +13,20 @@ const Quiz = () => {
     let [value, setValue] = useState(); // value that user select
     let [count, setCount] = useState(0); // track on the number of questions
     
+    const clearActiveItem = () => {
+      if (document.querySelector('.active-item')) {
+        document.querySelector('.active-item .checkmark').innerHTML = '<i class="far fa-circle">';
+        document.querySelector('.active-item').classList.remove('active-item');
+      } 
+    }
 
-    const handleCheck = (value) => {
-      setValue(value); // set value equal to user's selected value
+    const handleCheck = (event) => {
+      setValue(event.target.dataset.value); // set value equal to user's selected value
+      
+      clearActiveItem();
+  
+      event.target.classList.add('active-item');
+      event.target.querySelector('.checkmark').innerHTML = '<i class="fas fa-check-circle"></i>';
     };
   
     const handleClickNext = () => {
@@ -24,6 +35,8 @@ const Quiz = () => {
       }
       alert(`Your current score is ${score}`);
       let newCount = count < questions.length ? count + 1 : count;
+
+      clearActiveItem();
       
       setCount(newCount);
     };
@@ -49,8 +62,7 @@ const Quiz = () => {
           </div>
         </div>
       </div>
-       }
-        
+      }
       </div>
     );
   };
