@@ -6,8 +6,9 @@ import './Quiz.scss';
  
 
 const Quiz = ({questions, count, score, handleCheck,handleClickNext}) => {
-   
+   console.log(questions[count].question, count)
     return ( 
+     
      <div className="container">
         <h1>Quiz Board</h1>
         <span style={{color:"red"}}>(Your current score is: {score})</span>  {/* Test only */}

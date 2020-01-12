@@ -5,7 +5,7 @@ const QUIZ_DATA = [
     questions: [
       {
         id: '0',
-        question: 'Suppose we had a function that performed one step for each element in a collection of input data. What would the Big O time complexity be for this function?',
+        question: 'The first Binary Search Trees question?',
         multipleChoices: [
           'Constant: O(1)',
           'Logarithmic: O(logn)',
