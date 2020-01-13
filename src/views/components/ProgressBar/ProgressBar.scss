@@ -1,0 +1,89 @@
+.container {
+  padding: 150px 20px;
+  background: #e1eec3;
+}
+
+.progress-bar {
+  display: block;
+  width: 100%;
+  padding-left: 20px;
+}
+.progress-bar .progress-dot {
+  width: 25%;
+  height: 0;
+  display: block;
+  float: left;
+  position: relative;
+  border-bottom: 5px solid #f05053;
+  margin-bottom: 10px;
+}
+.progress-bar .progress-dot:after {
+  text-align: center;
+  font-size: 8px;
+  line-height: 10px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #e1eec3;
+  border: 5px solid #f05053;
+  display: block;
+  position: absolute;
+  right: -2px;
+  top: -7px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.progress-bar .progress-dot:nth-child(1):after{
+  content: "1";
+}
+
+.progress-bar .progress-dot:nth-child(2):after{
+  content: "2";
+}
+
+.progress-bar .progress-dot:nth-child(3):after{
+  content: "3";
+}
+
+.progress-bar .progress-dot:nth-child(4):after{
+  content: "4";
+}
+
+.progress-bar .progress-dot:nth-child(5):after{
+  content: "5";
+}
+
+.progress-bar .progress-dot:nth-child(6):after{
+  content: "6";
+}
+
+.progress-bar .progress-dot:nth-child(7):after{
+  content: "7";
+}
+
+.progress-bar .progress-dot:nth-child(8):after{
+  content: "8";
+}
+
+.progress-bar .progress-dot:nth-child(9):after{
+  content: "9";
+}
+
+.progress-bar .progress-dot:nth-child(10):after{
+  content: "10";
+}
+
+.progress-bar .progress-dot.complete {
+  border-bottom-color: #9a0d10;
+}
+.progress-bar .progress-dot.complete:after {
+  border-color: #9a0d10;
+  background-color: #9a0d10;
+}
+.progress-bar.ext-10 .progress-dot {
+  width: 10%;
+}
+.progress-bar .progress-dot:first-of-type {
+  width: 0px;
+}
