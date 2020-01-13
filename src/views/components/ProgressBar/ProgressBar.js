@@ -1,15 +1,14 @@
 import React from 'react';
-import 'ProgressBar.scss';
+import './ProgressBar.scss';
 
 export default () => {
   return (
-
-<div class="progress-container">
-  <div class="progress-box">
-    <div class="progress-circle complete">
-      1
-    </div>
-    <div class="progress-bridge">
+      <div class="progress-container">
+        <div class="progress-box">
+          <div class="progress-circle complete">
+            1
+          </div>
+          <div class="progress-bridge">
       <div class="progress-line">
       </div>
     </div>
