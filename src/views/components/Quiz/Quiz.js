@@ -5,6 +5,7 @@ import Question from '../Question/Question';
 import MultipleChoice from '../MultipleChoice/MultipleChoice';
 import Results from '../Results/Results';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import LevelBar from '../LevelBar/LevelBar';
 
 import QUIZ_DATA from '../../../quiz-data';
 
