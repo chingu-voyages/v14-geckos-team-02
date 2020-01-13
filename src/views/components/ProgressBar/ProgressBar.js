@@ -1,97 +1,22 @@
 import React from 'react';
 import './ProgressBar.scss';
 
-export default () => {
+export default (questionLevel) => {
+  let stringFunc = (i,n) => `progress-circle ${i <= n ? 'complete' : ''}`;
+
   return (
-      <div class="progress-container">
-        <div class="progress-box">
-          <div class="progress-circle complete">
-            1
-          </div>
-          <div class="progress-bridge">
-      <div class="progress-line">
+      <div className="progress-container">
+        {[1,2,3,4,5,6,7,8,9,10].map(num =>
+          (<div className="progress-box">
+            <div className={stringFunc(num,questionLevel)}>
+              {num}
+            </div>
+            <div className="progress-bridge">
+        <div className="progress-line">
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="progress-box">
-    <div class="progress-circle complete">
-      2
-    </div>
-    <div class="progress-bridge">
-      <div class="progress-line">
+    </div>)
+        )}
       </div>
-    </div>
-  </div>
-  <div class="progress-box">
-    <div class="progress-circle">
-      3
-    </div>
-    <div class="progress-bridge">
-      <div class="progress-line">
-      </div>
-    </div>
-  </div>
-  <div class="progress-box">
-    <div class="progress-circle">
-      4
-    </div>
-    <div class="progress-bridge">
-      <div class="progress-line">
-      </div>
-    </div>
-  </div>
-  <div class="progress-box">
-    <div class="progress-circle">
-      5
-    </div>
-    <div class="progress-bridge">
-      <div class="progress-line">
-      </div>
-    </div>
-  </div>
-  <div class="progress-box">
-    <div class="progress-circle">
-      6
-    </div>
-    <div class="progress-bridge">
-      <div class="progress-line">
-      </div>
-    </div>
-  </div>
-  <div class="progress-box">
-    <div class="progress-circle">
-      7
-    </div>
-    <div class="progress-bridge">
-      <div class="progress-line">
-      </div>
-    </div>
-  </div>
-  <div class="progress-box">
-    <div class="progress-circle">
-      8
-    </div>
-    <div class="progress-bridge">
-      <div class="progress-line">
-      </div>
-    </div>
-  </div>
-  <div class="progress-box">
-    <div class="progress-circle">
-      9
-    </div>
-    <div class="progress-bridge">
-      <div class="progress-line">
-      </div>
-    </div>
-  </div>
-  <div class="progress-box">
-    <div class="progress-circle">
-      10
-    </div>
-    <div class="progress-bridge">
-    </div>
-  </div>
-</div>
   );
 };
