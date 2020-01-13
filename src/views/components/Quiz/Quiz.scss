@@ -28,20 +28,22 @@ label {
   padding: 10px 20px;
 }
 
-.button-container {
-  display: flex;
-  justify-content: flex-end;
 
-    margin: 30px;
-    padding: 15px 60px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: $button-background;
-    border: none;
-    letter-spacing: 1.5px;
-  }
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
 
-  .next-button:hover {
-    cursor: pointer;
+    .next-button {
+      margin: 30px;
+      padding: 15px 60px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: $button-background;
+      border: none;
+      letter-spacing: 1.5px;
+    }
+
+    .next-button:hover {
+      cursor: pointer;
+    }
   }
-}
