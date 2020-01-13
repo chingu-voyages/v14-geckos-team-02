@@ -4,6 +4,101 @@ const QUIZ_DATA = [
     name: 'Binary Search Trees',
     questions: [
       {
+        id: 0,
+        question: "BST search, insert, and delete operations typically run in time O(d). What is d?",
+        multipleChoices: [
+          'The number of divisions at each level',  
+          'The total number of entries in all the nodes of the tree',
+          'The depth of the relevant node in the tree',
+          'The number of entries in each node',
+          'The number of nodes in the tree'
+        ],
+        answer: 'The depth of the relevant node in the tree',
+      },
+      {
+        id: 1,
+        question: 'A binary tree is another name for a BST.',
+        multipleChoices: ['True', 'False'],
+        answer: 'False',
+      },
+      {
+        id: 2,
+        question: 'RAM access time is normally measured in:',
+        multipleChoices: [
+          'Nanoseconds (billionths of a second)', 
+          'Milliseconds (thousandths of a second)',
+          'Microseconds (millionths of a second)'
+        ],
+        answer: 'Nanoseconds (billionths of a second)',
+      },
+      {
+        id: 3,
+        question: 'The Sequential Search algorithm is in O(n^2)O(n2).',
+        multipleChoices: ['True', 'False'],
+        answer: 'True',
+      },
+      {
+        id: 4,
+        question: 'Given an array-based list implementation, deleting the current element takes how long in the average case?',
+        multipleChoices: ['Θ(nlogn) time', 'Θ(n) time', 'Θ(1) time', 'Θ(logn) time'],
+        answer: 'Θ(n) time',
+      },
+      {
+        id: 5,
+        question: 'An advantage of linked lists over the array-based list implementation is:',
+        multipleChoices: [
+          'Expandability',
+          'Low- access cost to arbitrary positions',
+          'None of these","Θ(logn) time', 
+          'Zero overhead',
+          'Optimal search speed'
+        ],
+        answer: 'Expandability',
+      },
+      {
+        id: 6,
+        question: 'Which of these is the best upper bound for a growth rate of 5n + 3?',
+        multipleChoices: [
+          'O(1)',
+          'O(logn)',
+          'O(nlogn)', 
+          'O(n)'
+        ],
+        answer: "O(n)",
+      },
+      {
+        id: 7,
+        question: 'Determine the proper relationship between the pair of functions: f(n)=10 and g(n)=log 10',
+        multipleChoices: [
+          'f(n)is in Ω(g(n))',
+          'f(n)is Θ(g(n))',
+          'f(n) is in O(g(n))'
+        ],
+        answer: "f(n)is Θ(g(n))",
+      },
+      {
+        id: 8,
+        question: 'The worst case upper bound for sorting an array is O(nlogn) since this is the cost of the best algorithm (in the worst case) that we know about.',
+        multipleChoices: ['True', 'False'],
+        answer: "True",
+      },
+      {
+        id: 9,
+        question: 'An inversion is:',
+        multipleChoices: [
+          'A swap',
+          'When a record with key value greater than the current record\'s key appears before it in the array',
+          'A type of sort'
+        ],
+        answer: 'When a record with key value greater than the current record\'s key appears before it in the array'
+      }
+    ]
+  },
+  {
+    id: 1,
+    name: 'Big O Notation',
+    questions: [
+      {
         id: '0',
         question: 'Suppose we had a function that performed one step for each element in a collection of input data. What would the Big O time complexity be for this function?',
         multipleChoices: [

@@ -17,6 +17,7 @@ $button-background: #4B22F3;
 }
 
 .question {
+  font-size: 1.25rem;
   color: #fff;
   padding: 0 20px;
 }
@@ -27,15 +28,10 @@ label {
   padding: 10px 20px;
 }
 
-input[type="radio"]:checked {
-  color: $highlights;
-}
-
 .button-container {
   display: flex;
   justify-content: flex-end;
 
-  button {
     margin: 30px;
     padding: 15px 60px;
     font-size: 1rem;
@@ -43,5 +39,9 @@ input[type="radio"]:checked {
     background-color: $button-background;
     border: none;
     letter-spacing: 1.5px;
+  }
+
+  .next-button:hover {
+    cursor: pointer;
   }
 }
