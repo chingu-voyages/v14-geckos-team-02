@@ -39,7 +39,7 @@ const Quiz = () => {
         <span style={{color:"red"}}>(Your current score is: {score})</span>  {/* Test only */}
         <div>
           <Question question={questions[count].question} />
-          <ProgressBar questionLevel={2}/>
+          <ProgressBar questionLevel={count + 1}/>
           <MultipleChoice
               choices={questions[count].multipleChoices}
               answer={questions[count].answer}
