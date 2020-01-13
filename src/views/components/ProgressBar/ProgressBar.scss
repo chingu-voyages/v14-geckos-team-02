@@ -1,7 +1,7 @@
 .progress-container {
   background-color:transparent;
-  width: 200px;
-  height: 10px;
+  width: 300px;
+  height: 15px;
   display: grid;
   grid-template-columns: repeat(10,1fr);
 }
@@ -17,8 +17,9 @@
   text-align: center;
   line-height: 8px;
   font-size: 5px;
+  color: white;
   border-radius: 50%;
-  border: 1px solid blue;
+  border: 1px solid white;
 }
 
 .progress-bridge {
