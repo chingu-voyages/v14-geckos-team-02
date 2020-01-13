@@ -4,11 +4,12 @@ import { Switch, Route } from 'react-router-dom';
 import './App.scss';
 
 import HomePage from './views/pages/HomePage/HomePage';
-import QuizCollections from './views/pages/QuizCollections/QuizCollections' //for test
-
-import Quiz from './views/components/Quiz/Quiz';
 import Header from './views/components/Header/Header';
 import Footer from './views/components/Footer/Footer';
+import QuizCollections from './views/pages/QuizCollections/QuizCollections' //for test
+import QuizPage from './views/components/QuizPage/QuizPage'
+ 
+
 
 class App extends React.Component {
   render(){
@@ -18,8 +19,8 @@ class App extends React.Component {
         <main>
           <Switch>
             <Route exact path='/' component={HomePage} /> 
-            <Route exact path='/big-o' component={Quiz} />
             <Route exact path='/quiz-collections' component={QuizCollections} />
+            <Route exact path='/quiz/:link' component={QuizPage} />
           </Switch>
         </main>
         <Footer />
