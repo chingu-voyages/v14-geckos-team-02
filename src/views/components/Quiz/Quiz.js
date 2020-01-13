@@ -5,7 +5,6 @@ import Question from '../Question/Question';
 import MultipleChoice from '../MultipleChoice/MultipleChoice';
 import Results from '../Results/Results';
 import ProgressBar from '../ProgressBar/ProgressBar';
-import LevelBar from '../LevelBar/LevelBar';
 
 import QUIZ_DATA from '../../../quiz-data';
 
@@ -39,7 +38,6 @@ const Quiz = () => {
         <h1>Quiz Board</h1>
         <span style={{color:"red"}}>(Your current score is: {score})</span>  {/* Test only */}
         <div>
-          <LevelBar />
           <Question question={questions[count].question} />
           <MultipleChoice
               choices={questions[count].multipleChoices}
