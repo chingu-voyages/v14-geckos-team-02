@@ -14,7 +14,7 @@ export default ({
           <span style={{color:'green'}}>(Answer: {answer})</span> {/* Test only */}
           {choices.map((choice,i) => {
               return (
-                <li key={i} className="multiple-choice-item" onClick={e=>handleCheck(e)} data-value={choice}>
+                <li key={i} className="multiple-choice-item" onClick={handleCheck} data-value={choice}>
                   <span className="checkmark"><i className="far fa-circle"></i></span>{choice}
                 </li>
               )}

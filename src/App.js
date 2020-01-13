@@ -7,7 +7,7 @@ import HomePage from './views/pages/HomePage/HomePage';
 import Header from './views/components/Header/Header';
 import Footer from './views/components/Footer/Footer';
 import QuizCollections from './views/pages/QuizCollections/QuizCollections' //for test
-import QuizPage from './views/components/QuizPage/QuizPage'
+import QuizPage from './views/pages/QuizPage/QuizPage'
  
 
 
@@ -20,7 +20,7 @@ class App extends React.Component {
           <Switch>
             <Route exact path='/' component={HomePage} /> 
             <Route exact path='/quiz-collections' component={QuizCollections} />
-            <Route exact path='/quiz/:link' component={QuizPage} />
+            <Route exact path='/quiz/:id' component={QuizPage} />
           </Switch>
         </main>
         <Footer />
