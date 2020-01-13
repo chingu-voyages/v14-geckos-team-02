@@ -1,9 +1,8 @@
 import React from 'react';
 import './ProgressBar.scss';
 
-export default (questionLevel) => {
+export default ({questionLevel}) => {
   let stringFunc = (i,n) => `progress-circle ${i <= n ? 'complete' : ''}`;
-
   return (
       <div className="progress-container">
         {[1,2,3,4,5,6,7,8,9,10].map(num =>
