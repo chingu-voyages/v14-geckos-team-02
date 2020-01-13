@@ -13,19 +13,36 @@ const Quiz = () => {
     let [value, setValue] = useState(); // value that user select
     let [count, setCount] = useState(0); // track on the number of questions
     
+    const clearActiveItem = () => {
+      if (document.querySelector('.active-item')) {
+        document.querySelector('.active-item .checkmark').innerHTML = '<i class="far fa-circle">';
+        document.querySelector('.active-item').classList.remove('active-item');
+      } 
+    }
 
-    const handleCheck = (value) => {
-      setValue(value); // set value equal to user's selected value
+    const handleCheck = (event) => {
+      setValue(event.target.dataset.value); // set value equal to user's selected value
+      
+      clearActiveItem();
+  
+      event.target.classList.add('active-item');
+      event.target.querySelector('.checkmark').innerHTML = '<i class="fas fa-check-circle"></i>';
+      document.querySelector('.next-button').disabled = false;
     };
   
     const handleClickNext = () => {
-      if (questions[count].answer === value) {
-        setScore((score += 1));
+      if (document.querySelector('.active-item')) {
+        if (questions[count].answer === value) {
+          setScore((score += 1));
+        }
+        alert(`Your current score is ${score}`);
+        let newCount = count < questions.length ? count + 1 : count;
+  
+        clearActiveItem();
+        
+        setCount(newCount);
       }
-      alert(`Your current score is ${score}`);
-      let newCount = count < questions.length ? count + 1 : count;
       
-      setCount(newCount);
     };
     console.log(count, "---", questions.length)
     
@@ -44,11 +61,12 @@ const Quiz = () => {
               handleCheck={handleCheck}
               id={questions[count].questionId}
           />
-          <button onClick={() => handleClickNext()}>Next</button>
+          <div className="button-container">
+            <button className="next-button" onClick={handleClickNext}>Next</button>
+          </div>
         </div>
       </div>
-       }
-        
+      }
       </div>
     );
   };
