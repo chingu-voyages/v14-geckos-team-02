@@ -6,9 +6,7 @@ import './Quiz.scss';
  
 
 const Quiz = ({questions, count, score, handleCheck,handleClickNext}) => {
-   console.log(questions[count].question, count)
     return ( 
-     
      <div className="container">
         <h1>Quiz Board</h1>
         <span style={{color:"red"}}>(Your current score is: {score})</span>  {/* Test only */}
@@ -20,7 +18,9 @@ const Quiz = ({questions, count, score, handleCheck,handleClickNext}) => {
               handleCheck={handleCheck}
               id={questions[count].questionId}
           />
-          <button onClick={handleClickNext}>Next</button>
+          <div className="button-container">
+            <button className="next-button" onClick={handleClickNext}>Next</button>
+          </div>
         </div>
       </div>
     );
