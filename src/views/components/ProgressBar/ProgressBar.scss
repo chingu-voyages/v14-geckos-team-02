@@ -1,7 +1,7 @@
 .progress-container {
   background-color:transparent;
-  width: 300px;
-  height: 15px;
+  width: 600px;
+  height: 30px;
   display: grid;
   grid-template-columns: repeat(10,1fr);
 }
@@ -11,26 +11,36 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
+  justify-content: center;
+  align-items: stretch;
 }
 .progress-circle {
+  display:grid;
+  grid-template: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  line-height: 12px;
   font-size: 9px;
   color: white;
   border-radius: 50%;
-  border: 1px solid blue;
+  border: 2px solid blue;
 }
 
 .progress-bridge {
   display: grid;
+  grid-template: 1fr/1fr;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
 .progress-line {
   height: 3px;
-  width: 14px;
+  width: 98%;
   background-color: blue;
+  margin-left: 3px;
 }
 
 .progress-box:last-of-type .progress-line {
