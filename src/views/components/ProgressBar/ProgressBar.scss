@@ -22,6 +22,7 @@
       color: white;
       border-radius: 50%;
       border: 2px solid blue;
+      transition: background-color 2s;
     }
     .progress-bridge {
       @include standard(1fr/1fr,center);
