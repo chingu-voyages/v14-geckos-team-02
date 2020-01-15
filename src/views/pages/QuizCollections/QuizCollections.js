@@ -18,7 +18,7 @@ export default () => {
                 </div>
                 <div className="btn-display">
                     <button className="button-primary">
-                        <Link to={quizSubject.link}>Take Quiz</Link> 
+                        <Link to={`/quiz/${quizSubject.id}`}>Take Quiz</Link> 
                     </button>
                 </div>  
             </div>

@@ -18,6 +18,9 @@
       }
     }
 
+   
+
+
     @keyframes flyin {
       to { 
         filter: blur(0);
@@ -56,8 +59,9 @@
         color:#444;
     }
     &__accuracy {
+   
       color: #666;
-      line-height: 0.1rem;
+      line-height: 1em ;
       font-size: 1.7rem;
     }
   }
