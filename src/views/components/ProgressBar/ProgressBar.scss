@@ -1,47 +1,39 @@
+@mixin standard($grid-template, $align) {
+  display: grid;
+  grid-template: $grid-template;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: $align;
+}
+
 .progress-container {
   background-color:transparent;
-  width: 600px;
-  height: 30px;
+  width: 250px;
+  height: 13px;
   display: grid;
   grid-template-columns: repeat(10,1fr);
   margin-left: 30px;
-}
-
-.progress-box {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: stretch;
-}
-.progress-circle {
-  display:grid;
-  grid-template: 1fr 1fr;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 100%;
-  color: white;
-  border-radius: 50%;
-  border: 2px solid blue;
-}
-
-.progress-bridge {
-  display: grid;
-  grid-template: 1fr/1fr;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-}
-.progress-line {
-  height: 3px;
-  width: 98%;
-  background-color: blue;
-  margin-left: 3px;
+  .progress-box {
+    @include standard(1fr/1fr 1fr,stretch);
+    .progress-circle {
+      @include standard(1fr 1fr,center);
+      font-size: 50%;
+      color: white;
+      border-radius: 50%;
+      border: 2px solid blue;
+    }
+    .progress-bridge {
+      @include standard(1fr/1fr,center);
+      grid-template: 1fr/1fr;
+      .progress-line {
+        height: 3px;
+        width: 98%;
+        background-color: blue;
+        margin-left: 3px;
+      }
+    }
+  }
 }
 
 .progress-box:last-of-type .progress-line {
@@ -50,4 +42,14 @@
 
 .complete {
   background-color: blue;
+}
+
+@media only screen and (min-width: 768px){
+  .progress-container {
+    width: 600px;
+    height: 30px;
+  }
+  .progress-circle {
+    font-size: 100%;
+  }
 }
