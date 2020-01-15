@@ -13,7 +13,7 @@
   height: 10px;
   display: grid;
   grid-template-columns: repeat(10,1fr);
-  margin-left: 30px;
+  margin: auto;
   .progress-box {
     @include standard(1fr/1fr 1fr,stretch);
     .progress-circle {
