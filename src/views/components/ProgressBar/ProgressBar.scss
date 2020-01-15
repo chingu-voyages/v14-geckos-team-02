@@ -9,8 +9,8 @@
 
 .progress-container {
   background-color:transparent;
-  width: 250px;
-  height: 13px;
+  width: 200px;
+  height: 10px;
   display: grid;
   grid-template-columns: repeat(10,1fr);
   margin-left: 30px;
@@ -43,13 +43,23 @@
 .complete {
   background-color: blue;
 }
-
+@media only screen and (min-width: 400px) {
+  .progress-container {
+    width: 250px;
+    height: 13px;
+  }
+}
 @media only screen and (min-width: 768px){
   .progress-container {
     width: 600px;
     height: 30px;
+    .progress-box
+    {
+      .progress-circle {
+        font-size: 100%;
+        font-weight: bold;
+      }
+    }
   }
-  .progress-circle {
-    font-size: 100%;
-  }
+
 }
