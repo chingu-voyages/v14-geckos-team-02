@@ -15,6 +15,9 @@ $highlights: #0dc5ce;
     border: 1px solid #8b8b8b;
     display: flex;
     align-items: center;
+    span.checkmark {
+      pointer-events:none;
+    }
   }
 
   .active-item {
@@ -33,4 +36,3 @@ $highlights: #0dc5ce;
     // background-color: #fff;
   }
 }
-
