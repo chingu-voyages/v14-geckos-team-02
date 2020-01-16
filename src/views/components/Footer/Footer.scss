@@ -12,9 +12,16 @@ footer {
   }
 }
 
-@media only screen and (min-width: 576px){
+@media only screen and (min-width: 576px) {
   footer {
     font-size: 0.9rem;
     text-align: right;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  footer {
+    position: absolute;
+    bottom: 30px;
   }
 }

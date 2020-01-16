@@ -1,22 +1,22 @@
 nav {
   text-transform: uppercase;
-  text-align:center;
+  text-align: center;
   padding: 24px 0 18px 24px;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   border-bottom: 1px solid black;
 }
 
-@media only screen and (min-width: 576px){
+@media only screen and (min-width: 576px) {
   nav {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 800;
   }
 }
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px) {
   nav {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 900;
     text-align: left;
   }
