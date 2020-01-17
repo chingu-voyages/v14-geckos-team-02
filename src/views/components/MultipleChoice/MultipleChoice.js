@@ -5,13 +5,10 @@ export default ({
   question,
   choices,
   handleCheck,
-  id,
-  answer,// Test only
 }) => {
        return (
         <div className="multiple-choice-list">
           <h2>{question}</h2> 
-          <span style={{color:'green'}}>(Answer: {answer})</span> {/* Test only */}
           {choices.map((choice,i) => {
               return (
                 <li key={i} className="multiple-choice-item" onClick={handleCheck} data-value={choice}>
