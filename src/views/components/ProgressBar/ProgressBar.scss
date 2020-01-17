@@ -1,3 +1,5 @@
+$circle-background: #4B22F3;
+
 @mixin standard($grid-template, $align) {
   display: grid;
   grid-template: $grid-template;
@@ -21,7 +23,7 @@
       font-size: 50%;
       color: white;
       border-radius: 50%;
-      border: 2px solid blue;
+      border: 2px solid $circle-background;
       transition: background-color 2s;
     }
     .progress-bridge {
@@ -30,7 +32,7 @@
       .progress-line {
         height: 3px;
         width: 98%;
-        background-color: blue;
+        background-color: $circle-background;
         margin-left: 3px;
       }
     }
@@ -42,7 +44,7 @@
 }
 
 .complete {
-  background-color: blue;
+  background-color: $circle-background;
 }
 @media only screen and (min-width: 400px) {
   .progress-container {
