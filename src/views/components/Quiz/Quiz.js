@@ -5,7 +5,6 @@ import Question from '../Question/Question';
 import MultipleChoice from '../MultipleChoice/MultipleChoice';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
-import QUIZ_DATA from '../../../quiz-data';
 
 const Quiz = ({questions, count, score, handleCheck,handleClickNext}) => {
     return (
