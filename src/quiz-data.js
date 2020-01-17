@@ -209,116 +209,118 @@ const QUIZ_DATA = [
     ]
   },
   {
-    id: 1,
-    name: 'Big O Notation',
+    id: 2,
+    name: 'Sorting',
     questions: [
       {
         id: '0',
-        question: 'Suppose we had a function that performed one step for each element in a collection of input data. What would the Big O time complexity be for this function?',
+        question: 'In which cases are the growth rates the same for Insertion Sort?',
         multipleChoices: [
-          'Constant: O(1)',
-          'Logarithmic: O(logn)',
-          'Quadratic: O(n^2)',
-          'Linear: O(n)'
+          'Worst and Average only',
+          'Worst, Average, and Best',
+          'Best and Average only',
+          'Worst and Best only'
         ],
-        answer: 'Linear: O(n)'
+        answer: 'Worst and Average only'
       },
       {
         id: '1',
-        question: 'Suppose we had a function that iterated through a collection of data once to find the minimum value, and then again in a separate iteration to find the maximum value. How would we write the Big O time complexity?',
+        question: 'We know that the worst case for Insertion Sort is about n^2/2, while the average case is about n^2/4. This means that:',
         multipleChoices: [
-          'O(2n)',
-          'O(n^2)',
-          'O(n)',
-          'O(n + n)'
+          'The growth rates are the same',
+          'The runtime in the average case is about half that of the worst case',
+          'Both of the above',
+          'None of the above'
         ],
-        answer: 'O(n)'
+        answer: 'Both of the above'
       },
       {
         id: '2',
-        question: 'An identical algorithm written in two different programming languages will have the same Big O runtime complexity.',
+        question: 'When implementing Insertion Sort, a binary search could be used to locate the position within the first i-1 records of the array into which record ii should be inserted. Using binary search will:',
         multipleChoices: [
-          'True',
-          'False'
+          'Speed up the asymptotic running time because the position to insert will be found in Θ(logi) time',
+          'Speed up the asymptotic running time because shifting the records to make room for the insert will require Θ(i) time',
+          'None of these answers is correct',
+          'Not speed up the asymptotic running time because shifting the records to make room for the insert will require Θ(i) time'
         ],
-        answer: 'True'
+        answer: 'Not speed up the asymptotic running time because shifting the records to make room for the insert will require Θ(i) time'
       },
       {
         id: '3',
-        question: 'Why are constant factors (such as 2N) and lower order terms (N^2 + N becomes N^2) ignored when writing Big O notation?',
+        question: 'What is the running time for Bubble Sort when the input array has values that are in reverse sort order?',
         multipleChoices: [
-          'As the input to the function grows toward infinity, lower order terms and constant factors cancel each other out',
-          'We cannot be sure of the significance of lower order terms as they relate to the constant factors',
-          'As the input to the function grows toward infinity, lower order terms and constant factors become insignificant compared to the term with the higher order of magnitude',
-          'We do incorporate lower order terms and constant factors into Big O!'
+          'Θ(nlogn)',
+          'Θ(n)',
+          'Θ(n2)',
+          'Θ(logn)'
         ],
-        answer: 'As the input to the function grows toward infinity, lower order terms and constant factors become insignificant compared to the term with the higher order of magnitude'
+        answer: 'Θ(n2)'
       },
       {
         id: '4',
-        question: 'Suppose we had a function that took in a list of data as an input. For each element in the list, the function compared it to every other element in the collection. What would the Big O time complexity be for this function?',
+        question: 'What is the running time of Bubble Sort (as the algorithm is presented in this module) when the input is an array that has already been sorted?',
         multipleChoices: [
-          'Constant: O(1)',
-          'Quadratic: O(n^2)',
-          'Exponential: O(2^n)',
-          'Linear: O(n)'
+          'Θ(logn)',
+          'Θ(n)',
+          'Θ(nlogn)',
+          'Θ(n^2)'
         ],
-        answer: 'Quadratic: O(n^2)'
+        answer: 'Θ(n^2)'
       },
       {
         id: '5',
-        question: 'With Big O notation, we evaluate a function’s runtime efficiency based on the ____?',
+        question: 'What is the worst-case time for Selection Sort to sort an array of n records?',
         multipleChoices: [
-          'Number of conditional statements.',
-          'Number of variables created within the function',
-          'Size of the inputs',
-          'Helper function(s)'
+          'Θ(n)',
+          'Θ(logn)',
+          'Θ(nlogn)',
+          'Θ(n^2)'
         ],
-        answer: 'Size of the inputs'
+        answer: 'Θ(n^2)'
       },
       {
         id: '6',
-        question: 'Why don’t we use time-elapsed (5 minutes, for example) as a measurement for an algorithm’s runtime?',
+        question: 'In which cases are the time complexities the same for Selection Sort?',
         multipleChoices: [
-          'Different units of measurement makes this approach not feasible',
-          'This approach would not be relevant in quantum-computing',
-          'Time is relative',
-          'This approach depends on the speed of the processor, what else the computer is running, different programming language etc.'
+          'Worst and Best',
+          'Worst and Average',
+          'Best and Average',
+          'Worst, Average and Best'
         ],
-        answer: 'This approach depends on the speed of the processor, what else the computer is running, different programming language etc.'
+        answer: 'Worst, Average and Best'
       },
       {
         id: '7',
-        question: 'A function which only performed the operation 6 + 9 would be which Big O time complexity?',
+        question: 'What is the most complicated part of the Mergesort algorithm?',
         multipleChoices: [
-          'Factorial: O(n!)',
-          'Logarithmic: O(logn)',
-          'Constant: O(1)',
-          'Linear: O(n)'
+          'Partitioning the array',
+          'Merging the sorted halves back together',
+          'Achieving the base case',
+          'Finding the midpoint'
         ],
-        answer: 'Constant: O(1)'
+        answer: 'Merging the sorted halves back together'
       },
       {
         id: '8',
-        question: 'What is the least efficient runtime complexity?',
+        question: 'What is the average-case cost for Quicksort to sort an array of n elements?',
         multipleChoices: [
-          'O(logn)',
-          'O(n!)',
-          'O(1)',
-          'O(n)'
+          'Θ(logn)',
+          'Θ(n^2)',
+          'Θ(n)',
+          'Θ(nlogn)'
         ],
-        answer: 'O(n!)'
+        answer: 'Θ(nlogn)'
       },
       {
         id: '9',
-        question: 'Search algorithms often result in which Big O complexity?',
+        question: 'What is the worst-case cost for Quicksort to sort an array of n elements?',
         multipleChoices: [
-          'Constant: O(1)',
-          'Logarithmic: O(logn)',
-          'Linear: O(n)',
-          'Quadratic: O(n^2)'
+          'Θ(nlogn)',
+          'Θ(n)',
+          'Θ(logn)',
+          'Θ(n^2)'
         ],
-        answer: 'Logarithmic: O(logn)'
+        answer: 'Θ(n^2)'
       }
     ]
   }

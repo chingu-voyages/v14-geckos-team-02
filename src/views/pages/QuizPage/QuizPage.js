@@ -32,7 +32,6 @@ export default (props)=>{
       if (questions[count].answer === value) {
         setScore((score += 1));
       }
-      alert(`Your current score is ${score}`);
       let newCount = count < questions.length ? count + 1 : count;
 
       clearActiveItem();
@@ -40,7 +39,7 @@ export default (props)=>{
       setCount(newCount);
     }
   };
-    
+    console.log(props.match.params.id)
     return(
         <div>
         {(count===questions.length)?
@@ -48,7 +47,6 @@ export default (props)=>{
             <Quiz
                 questions={questions}
                 count={count}
-                score={score}
                 handleCheck={handleCheck} 
                 handleClickNext={handleClickNext} 
             />}

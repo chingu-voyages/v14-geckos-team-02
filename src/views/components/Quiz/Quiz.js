@@ -1,31 +1,30 @@
-import React from 'react'
+import React from 'react';
 import './Quiz.scss';
 
 import Question from '../Question/Question';
 import MultipleChoice from '../MultipleChoice/MultipleChoice';
 import ProgressBar from '../ProgressBar/ProgressBar';
 
-
-const Quiz = ({questions, count, score, handleCheck,handleClickNext}) => {
-    return (
-     <div className="container">
-        <h1>Quiz Board</h1>
-        <span style={{color:"red"}}>(Your current score is: {score})</span>  {/* Test only */}
-        <div>
-          <Question question={questions[count].question} />
-          <MultipleChoice
-              choices={questions[count].multipleChoices}
-              answer={questions[count].answer}
-              handleCheck={handleCheck}
-              id={questions[count].questionId}
-          />
+const Quiz = ({ questions, count, handleCheck, handleClickNext }) => {
+  return (
+    <div className='container'>
+      <h1>Quiz Board</h1>
+      <div>
+        <Question question={questions[count].question} />
+        <MultipleChoice
+          choices={questions[count].multipleChoices}
+          answer={questions[count].answer}
+          handleCheck={handleCheck}
+        />
         <ProgressBar questionLevel={count + 1} />
-          <div className="button-container">
-            <button className="next-button" onClick={handleClickNext}>Next</button>
-          </div>
+        <div className='button-container'>
+          <button className='next-button' onClick={handleClickNext}>
+            Next
+          </button>
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
-  export default Quiz;
+export default Quiz;
