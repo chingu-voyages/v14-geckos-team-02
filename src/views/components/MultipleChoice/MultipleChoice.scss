@@ -1,0 +1,38 @@
+$highlights: #0dc5ce;
+
+.multiple-choice-list {
+  padding: 0 20px;
+
+  .multiple-choice-item {
+    background-color: #282d49;
+    color: #fff;
+    width: 99%;
+    text-align: left;
+    padding: 20px 0;
+    margin: 20px 0;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border: 1px solid #8b8b8b;
+    display: flex;
+    align-items: center;
+    span.checkmark {
+      pointer-events:none;
+    }
+  }
+
+  .active-item {
+    border: 2px solid $highlights;
+  }
+
+  .fa-circle {
+    font-size: 1.5rem;
+    margin: 0 20px;
+  }
+
+  .fa-check-circle {
+    font-size: 1.5rem;
+    color: $highlights;
+    margin: 0 20px;
+    // background-color: #fff;
+  }
+}

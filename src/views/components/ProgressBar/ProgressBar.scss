@@ -1,0 +1,68 @@
+$circle-background: #4B22F3;
+
+@mixin standard($grid-template, $align) {
+  display: grid;
+  grid-template: $grid-template;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: $align;
+}
+
+.progress-container {
+  background-color:transparent;
+  width: 200px;
+  height: 10px;
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  margin: auto;
+  .progress-box {
+    @include standard(1fr/1fr 1fr,stretch);
+    .progress-circle {
+      @include standard(1fr 1fr,center);
+      font-size: 50%;
+      color: white;
+      border-radius: 50%;
+      border: 2px solid $circle-background;
+      transition: background-color 2s;
+    }
+    .progress-bridge {
+      @include standard(1fr/1fr,center);
+      grid-template: 1fr/1fr;
+      .progress-line {
+        height: 3px;
+        width: 98%;
+        background-color: $circle-background;
+        margin-left: 3px;
+      }
+    }
+  }
+}
+
+.progress-box:last-of-type .progress-line {
+  display: none;
+}
+
+.complete {
+  background-color: $circle-background;
+}
+@media only screen and (min-width: 400px) {
+  .progress-container {
+    width: 250px;
+    height: 13px;
+  }
+}
+@media only screen and (min-width: 768px){
+  .progress-container {
+    width: 600px;
+    height: 30px;
+    .progress-box
+    {
+      .progress-circle {
+        font-size: 100%;
+        font-weight: bold;
+      }
+    }
+  }
+
+}

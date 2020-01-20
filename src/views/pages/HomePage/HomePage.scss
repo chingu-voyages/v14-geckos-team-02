@@ -1,0 +1,51 @@
+$background-color: #181B33;
+$highlights: #0dc5ce;
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.welcome {
+  color: #fff;
+  margin-top: 13.33vh;
+  text-align: center;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  a {
+    font-size: 40px;
+    font-weight: 400;
+    color: $highlights;
+  }
+}
+
+@media only screen and (min-width: 600px){
+  .welcome {
+    h1 {
+      font-size: 110px;
+      font-weight: 800;
+    }
+    a {
+      font-size: 60px;
+      font-weight: 800;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .welcome {
+    h1 {
+      font-size: 160px;
+      font-weight: 900;
+    }
+    a {
+      font-size: 80px;
+      font-weight: 900;
+    }
+  }
+}
