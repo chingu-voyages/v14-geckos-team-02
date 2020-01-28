@@ -1,7 +1,7 @@
 $background-color: #181B33;
 $quiz-background: #282d49;
 $highlights: #0dc5ce;
-$button-background: #4B22F3;
+$button-background: #0dc5ce;
 
 .container {
   background-color: $quiz-background;
@@ -37,6 +37,7 @@ label {
       margin: 30px;
       padding: 15px 60px;
       font-size: 1rem;
+      outline: none;
       color: #fff;
       background-color: $button-background;
       border: none;
@@ -45,5 +46,6 @@ label {
 
     .next-button:hover {
       cursor: pointer;
+      outline: none;
     }
   }
