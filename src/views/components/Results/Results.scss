@@ -11,14 +11,48 @@
     transform: scale(2);
     filter: blur(4px);
      
-    @media (max-width: 500px) { //responsive 
+
+     
+    @media (max-width: 1800px) {  
+      &{
+        width: percentage(1.12/7);
+      }
+    }
+    @media (max-width: 1600px) {  
+      &{ 
+        width: percentage(1.3/7);
+      }
+    }
+    @media (max-width: 1400px) {  
+      &{  
+       width: percentage(1.5/7);
+      }
+    }
+    @media (max-width: 1200px) {  
+      &{  
+        width: percentage(2/7);
+      }
+    }
+    @media (max-width: 1000px) {  
+      &{
+        width: percentage(2.4/7);
+      }
+    }
+    @media (max-width: 800px) {  
+      &{  
+        width: percentage(3.3/7);
+      }
+    }
+    @media (max-width: 600px) {  
       & {
-        flex-basis: 50%;
-        width: 50%;
+        width: percentage(4.2/7);
       }
     }
 
-   
+
+ 
+
+ 
 
 
     @keyframes flyin {
