@@ -3,21 +3,27 @@ import { Switch, Route } from 'react-router-dom';
 import './App.scss';
 import HomePage from './views/pages/HomePage/HomePage';
 import Header from './views/components/Header/Header';
-import QuizCollections from './views/pages/QuizCollections/QuizCollections' //for test
-import QuizPage from './views/pages/QuizPage/QuizPage'
-
-
+import QuizCollections from './views/pages/QuizCollections/QuizCollections'; //for test
+import QuizPage from './views/pages/QuizPage/QuizPage';
 
 class App extends React.Component {
-  render(){
+  render() {
     return (
-      <div className="App">
+      <div className='App'>
         <Header />
         <main>
           <Switch>
             <Route exact path='/' component={HomePage} />
             <Route exact path='/quiz-collections' component={QuizCollections} />
-            <Route exact path='/quiz/:id' component={QuizPage} />
+            <Route path='/quiz/:id' component={QuizPage} />
+            <Route
+              render={() => (
+                <div className='not-found'>
+                  <h1>404</h1>
+                  <p>Not found</p>
+                </div>
+              )}
+            />
           </Switch>
         </main>
       </div>

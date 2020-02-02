@@ -4,17 +4,27 @@ import './Quiz.scss';
 import Question from '../Question/Question';
 import MultipleChoice from '../MultipleChoice/MultipleChoice';
 import ProgressBar from '../ProgressBar/ProgressBar';
-import Timer from '../Timer/Timer'
+import Timer from '../Timer/Timer';
 
-const Quiz = ({ questions, count, handleCheck, handleClickNext, seconds, toggle,isPaused }) => {
+const Quiz = ({
+  questions,
+  count,
+  handleCheck,
+  handleClickNext,
+  seconds,
+  toggle,
+  isPaused,
+  location
+}) => {
+  console.log(location);
   return (
     <div className='container'>
       <Timer seconds={seconds} toggle={toggle} isPaused={isPaused} />
       <h1>Quiz Board</h1>
-      
+
       <div>
         <Question question={questions[count].question} />
-      
+
         <MultipleChoice
           choices={questions[count].multipleChoices}
           answer={questions[count].answer}
