@@ -1,4 +1,4 @@
-$background-color: #181B33;
+$background-color: #181b33;
 $highlights: #0dc5ce;
 
 body {
@@ -8,4 +8,23 @@ body {
 main {
   position: relative;
   top: 0;
+}
+
+.not-found {
+  color: #fff;
+  margin-top: 13.33vh;
+  text-align: center;
+  h1 {
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+    font-size: 160px;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  p {
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+    font-size: 80px;
+    font-weight: 900;
+  }
 }

@@ -1,17 +1,21 @@
-import React,{useState, useEffect} from 'react'
- 
-import Results from '../../components/Results/Results'
-import Quiz from '../../components/Quiz/Quiz'
+import React, { useState, useEffect } from 'react';
+
+import Results from '../../components/Results/Results';
+import Quiz from '../../components/Quiz/Quiz';
 
 import QUIZ_DATA from '../../../quiz-data';
 
 export default props => {
-  const [questions] = useState(QUIZ_DATA[props.match.params.id].questions);
+  const [questions] = useState(
+    QUIZ_DATA[props.match.params.id]
+      ? QUIZ_DATA[props.match.params.id].questions
+      : null
+  );
   let [score, setScore] = useState(0); // counting score
   let [value, setValue] = useState(); // value that user select
   let [count, setCount] = useState(0); // track on the number of questions
-  let [seconds, setSeconds]=useState(0);
-  let [isPaused, setIsPaused]=useState(false);
+  let [seconds, setSeconds] = useState(0);
+  let [isPaused, setIsPaused] = useState(false);
 
   const clearActiveItem = () => {
     if (document.querySelector('.active-item')) {
@@ -45,36 +49,46 @@ export default props => {
     }
   };
 
-  const toggle=()=>{
+  const toggle = () => {
     setIsPaused(!isPaused);
-  }
+  };
 
-
-  useEffect(()=>{
-    let interval=null;
-    if(isPaused){
-      interval=setInterval(() => {
-        setSeconds(seconds=>seconds+1);
+  useEffect(() => {
+    let interval = null;
+    if (isPaused) {
+      interval = setInterval(() => {
+        setSeconds(seconds => seconds + 1);
       }, 1000);
-    }else if(!isPaused&&seconds!==0){
+    } else if (!isPaused && seconds !== 0) {
       clearInterval(interval);
     }
-    return ()=>clearInterval(interval);
-  },[isPaused,seconds])
-  
-  return(
-        <div>
-        {(count===questions.length)?
-            <Results score={score} numOfQuestions={questions.length}/>:
-            <Quiz
-                questions={questions}
-                count={count}
-                handleCheck={handleCheck} 
-                handleClickNext={handleClickNext} 
-                seconds={seconds}
-                toggle={toggle}
-                isPaused={isPaused}
-            />}
-        </div>
-    )
+    return () => clearInterval(interval);
+  }, [isPaused, seconds]);
+
+  if (questions) {
+    return (
+      <React.Fragment>
+        {count === questions.length ? (
+          <Results score={score} numOfQuestions={questions.length} />
+        ) : (
+          <Quiz
+            questions={questions}
+            count={count}
+            handleCheck={handleCheck}
+            handleClickNext={handleClickNext}
+            seconds={seconds}
+            toggle={toggle}
+            isPaused={isPaused}
+          />
+        )}
+      </React.Fragment>
+    );
+  } else {
+    return (
+      <div className='not-found'>
+        <h1>404</h1>
+        <p>Not found</p>
+      </div>
+    );
+  }
 };
